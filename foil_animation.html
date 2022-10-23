@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+    <nav>
+        <ul class="nav">
+          <li ><a href="C:\Users\tsabe\index.html">Home</a></li>
+          <li class="list1" ><a href="C:\Users\tsabe\technique.html">Wingfoil technique</a>
+            <div class="nav1">
+                <a href="C:\Users\tsabe\technique.html" style="display:block">Beginner</a>
+                <a href="C:\Users\tsabe\technique.html" style="display:block">Intermediate</a>
+            </div>
+          </li>
+          <li class="list1"><a href="C:\Users\tsabe\howfoilworks.html">Knowledge</a>
+            <div class="nav1">
+              <a href="C:\Users\tsabe\technique.html" style="display:block">What is a hydrofoil?</a>
+              <a href="C:\Users\tsabe\technique.html" style="display:block">Front wings and stabilisers</a>
+              <a href="C:\Users\tsabe\technique.html" style="display:block">How a foil is controlled</a>
+                <a href="C:\Users\tsabe\technique.html" style="display:block">Balancing the foil</a>
+                <a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a>
+                <a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a>
+              </div>
+           </li>
+        </ul>
+  
+      </nav>
+    
+    <h1>Foil balance simulator</h1>
+
+    <p>This allows you to look at the effects of changing the setup of your foil</p>
+
+    <h3>How to use:</h3>
+      <ul>
+        <li>Adjust the setup on the right of the screen</li>
+        <li>You can change the speed at the bottom. It is limited by the setup</li>
+        <li>The circle at the bottom shows where the balance point of the foil is - this is where the rider needs to stand</li>
+        <li>The line underneath shows the limits of balance point at low and high speed.</li>
+        <li>A long line underneath means a very stable setup. Good for beginners going at a constant speed on flat water. The downside is that at faster speeds, the rider weight needs to be very far forward</li>
+        <li>A short line underneath is better for wave riding, where speeds vary a lot. You do need to be more accurate with your weight, so better for advanced riders</li>
+      </ul>
+      
+      <div class="foiljava">
+        <canvas id="myCanvas" width="500" height="300"></canvas>
+        <div>
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="25" max="50" value="37.5" class="slider" id="frontfoilsize">
+            </div>
+            <p>Front foil size:&nbsp</p>
+            <p id="displayfrontfoilsize">1500</p>
+            <p>cm<sup>2</sup></p>
+          </div>
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="5" max="9" value="7" class="slider" id="rearfoilsize">
+            </div>
+            <p>Rear foil size:&nbsp</p>
+            <p id="displayrearfoilsize">280</p>
+            <p>cm<sup>2</sup></p>
+          </div>
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="140" max="200" value="170" class="slider" id="fuselength">
+            </div>
+            <p>Fuselage:&nbsp</p>
+            <p id="fuselengthdisplay">68</p>
+            <p>cm</p>
+          </div>
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="-4" max="0" value="-2" class="slider" id="shim">
+            </div>
+            <p>Shim:&nbsp</p>
+            <p id="shim_num">0</p>
+            <p><sup>0</sup></p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class = "slider">
+        <div class="slidecontainer">
+          <input type="range" min="0" max="150" value="75" class="slider" id="speed">
+        </div>
+        <p>Speed:&nbsp</p>
+        <p id="speed_output">15</p>
+        <p>kts</p>
+        
+        </div>
+        <table>
+          <tr>
+            <td>Stall Speed:</td>
+            <td id="speed_min">15</td>
+            <td>kts</td>
+          </tr>
+          <tr>
+            <td>Speed at 0<sup>0</sup> AoA:</td>
+            <td id="speed_max">15</td>
+            <td>kts</td>
+          </tr>
+        </table>
+      
+
+      <script type="text/javascript" src="Foil_Image.js"></script>
+
+      
+      <h4>Notes: </h4>
+      <ul>
+        <li>The upper speed limit is defined as AoA = 0. The foil could go faster, but is very difficult to control as tiny changes in pitch result in large lift changes. In reality this will also be limited by drag</li>
+        <li>The lower speed limit is defined as AoA = 15 (stall AoA). </li>
+        <li>I have assumed a foil where AoA at -5degrees creates zero lift, for both front wing and stabiliser</li>
+        <li>Speed is also limited by drag, which I haven't modelled for simplicity</li>
+        <li>I have assumed a -2 angle of incidence on the stabiliser</li>
+        <li>The speeds are relative only, and not meant to be an accurate model</li>
+      </ul>
+
+      
+      <div class=footer>Copyright &copy; 2022 
+        Tim Sabey. All rights reserved. Used with permission.
+      </div>
+    
+</body>
+
+</html>
