@@ -54,8 +54,13 @@ body {
     
   }
   h1 {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
+
+  h2 {
+    color: rgb(255, 255, 255);
+  }
+
   p {
     color: rgb(255, 255, 255);
   }
@@ -107,6 +112,12 @@ body {
   li.list1:hover .nav1 {display: block;}
 
   ul.nav a.hover {color: white;}
+
+  div.activity {
+    padding: 10px;
+    background-color: black;
+    
+  }
 
 
   div.footer {

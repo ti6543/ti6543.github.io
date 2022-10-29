@@ -1,5 +1,8 @@
 const foil1 = new Image();
 const foil2 = new Image();
+const man = new Image();
+const foil_pic = new Image();
+const board = new Image();
 var speed = 14;
 var fuselage_len = 170;
 var frontwingsize = 37.5;
@@ -14,6 +17,9 @@ function init() {
     
     foil1.src = 'foil1.png';
     foil2.src = 'foil2.png';
+    man.src = 'man.jpg';
+    board.src = 'board_only.png';
+    foil_pic.src = 'foil_only.png';
     // start animation:
   window.requestAnimationFrame(draw);
 }
@@ -25,9 +31,9 @@ var speed_output_max = document.getElementById("speed_max");
 var speed_output_min = document.getElementById("speed_min");
 speed_slider.oninput = function() {
     AngleOfAttack = 15-(0.1*speed_slider.value);
-    speed_output.innerHTML = (speed*0.6).toFixed(1);
-    speed_output_max.innerHTML = (maxspeed*0.6).toFixed(1);
-    speed_output_min.innerHTML = (minspeed*0.6).toFixed(1);
+    speed_output.innerHTML = (speed*0.75).toFixed(1);
+    speed_output_max.innerHTML = (maxspeed*0.75).toFixed(1);
+    speed_output_min.innerHTML = (minspeed*0.75).toFixed(1);
     
     draw();
     };
@@ -49,61 +55,69 @@ frontwingsize_slider.oninput = function() {
 var rearwingsize_slider = document.getElementById("rearfoilsize");
 var rearwingoutput = document.getElementById("displayrearfoilsize");
       rearwingsize_slider.oninput = function() {
-        backwingsize = rearwingsize_slider.value;
+        backwingsize = 0.5*rearwingsize_slider.value;
         rearwingoutput.innerHTML = backwingsize*40;
             } ;
 
 var shim_slider = document.getElementById("shim");
 var shim_output = document.getElementById("shim_num");
       shim_slider.oninput = function() {
-              shim = shim_slider.value;
-              shim_output.innerHTML = (Number(shim)+2);
+              shim = shim_slider.value*0.5;
+              shim_output.innerHTML = ((Number(shim))+2);
                   } ;
 
 // main draw function
 function draw() {
   const ctx = document.getElementById('myCanvas').getContext('2d');
   ctx.globalCompositeOperation = 'destination-over';
-  ctx.clearRect(0, 0, 500, 300); // clear canvas
+  ctx.clearRect(0, 0, 800, 300); // clear canvas
   
   
   // middle of front wing:
   var front_x = 180;
   var front_y = 80;
   var req_lift = 5000;
-  //AngleOfAttack = (20*cL)-5;
+  
   // back foil lift is positive downward:
+var min_AoA = 0;
+min_AoA =  (backwingsize-4)/4-(shim/5);
 
+if (AngleOfAttack<min_AoA) {AngleOfAttack = min_AoA};
 var cL_back = (-AngleOfAttack+5-Number(shim))/20;
 // min downward lift at low speed (15 degrees AoA)
 var cl_back_min = -0.5-(shim/20);
 // max downward lift at high speed (0 degrees AoA)
-var cl_back_max = +0.25-(shim/20);
+var cl_back_max = (-min_AoA+5-Number(shim))/20;
 var cL = (AngleOfAttack+5)/20;
+var cL_max = (min_AoA+5)/20;
 speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   
   var front_lift = cL*frontwingsize*speed*speed;
   var back_lift = cL_back*backwingsize*speed*speed;
+
    
-   maxspeed = Math.sqrt(req_lift/((0.25*frontwingsize)-(cl_back_max*backwingsize))); // AoA = 0
+   maxspeed = Math.sqrt(req_lift/((cL_max*frontwingsize)-(cl_back_max*backwingsize))); // AoA = 0
    minspeed = Math.sqrt(req_lift/((1*frontwingsize)-(cl_back_min*backwingsize))); // AoA = 15
-   speed_output.innerHTML = (speed*0.6).toFixed(1);
-   speed_output_max.innerHTML = (maxspeed*0.6).toFixed(1);
-   speed_output_min.innerHTML = (minspeed*0.6).toFixed(1);
+   speed_output.innerHTML = (speed*0.75).toFixed(1);
+   speed_output_max.innerHTML = (maxspeed*0.75).toFixed(1);
+   speed_output_min.innerHTML = (minspeed*0.75).toFixed(1);
+
+   
   
   
-  var front_lift_max = 0.25*frontwingsize*maxspeed*maxspeed; // AoA = 0
+  var front_lift_max = cL_max*frontwingsize*maxspeed*maxspeed; // AoA = 0
   var front_lift_min = 1*frontwingsize*minspeed*minspeed; // AoA = 15
   var back_lift_max = cl_back_max*backwingsize*maxspeed*maxspeed;
   var back_lift_min = cl_back_min*backwingsize*minspeed*minspeed;
+
+  var max_drag = front_lift_max+back_lift_max;
+  if (back_lift_max<0) {drag = front_lift_max-back_lift_max};
 
 
   var AoA_radians = AngleOfAttack*Math.PI/180;
   // middle of stabiliser:
   var back_x = front_x + fuselage_len*Math.cos(AoA_radians);
   var back_y = front_y + fuselage_len*Math.sin(AoA_radians);
-
-
 
   // position of balance point
   var bal_x = front_x - (fuselage_len*back_lift)/(front_lift-back_lift);
@@ -155,7 +169,7 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   var arrow_y = 0 + ypos;
   var frontarrowsize = front_lift/150;
   var backarrowsize = back_lift/150;
-  console.log(back_lift);
+  
   
   var a = +frontarrowsize+ +arrow_y;
     ctx.moveTo(arrow_x, 0 + arrow_y);
@@ -193,6 +207,15 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
     ctx.moveTo(mid_point,165);
     ctx.lineTo(mid_point,155);
     ctx.stroke();
+
+    //draw man/foil picture
+    var foil_x = 650 -(0.5*mid_point);
+    var man_x = 490 + bal_x/2;
+    ctx.drawImage(board,450,140,252,28);
+    ctx.restore();
+    ctx.drawImage(man,man_x,10,93,150);
+    ctx.drawImage(foil_pic,foil_x,160,136,96);
+    
 
   
   window.requestAnimationFrame(draw);
