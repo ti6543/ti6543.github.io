@@ -166,4 +166,14 @@ div.header {
       text-align: left;
       
     }
+
+    .windguru{
+      width: 500px;
+      padding: 5px;
+    }
+
+    .windgurucontainer{
+      display: flex;
+      flex-wrap: wrap;
+    }
   
