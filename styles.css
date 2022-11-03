@@ -28,11 +28,15 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
+}
+
+.foiljava > div {
+  padding: 30px;
 }
 
 img {
-  margin-left: 50px;
+  margin-left: 0px;
+  
 }
 
 div.header {
@@ -47,9 +51,11 @@ div.header {
 
 
 
-body {
+  body {
     background-color: rgb(254, 251, 246);
-    
+    background-image: url('background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     
   }
   h1 {
@@ -57,6 +63,12 @@ body {
   }
   p {
     color: rgb(0, 0, 0);
+  }
+
+  .activity {
+    background-color: rgba(254, 251, 246, 0.762);
+    padding: 10px;
+    
   }
 
   ul.nav {
@@ -73,6 +85,12 @@ body {
     background-color: #296f98;
     
   }
+
+  ul.nav > li {
+    color: white;
+    text-decoration: none;
+  }
+
   ul.nav > li > a {
     color: white;
     text-decoration: none;
@@ -115,6 +133,37 @@ body {
     font-size: 10pt;
     font-weight: bold;
     text-align: center;
-    position: relative;
+    position:fixed;
+    }
+
+    #slowfast {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .diagrams {
+      width: min-content;
+      text-align: center;
+      border-color:rgb(0, 0, 0);
+      border: 1px;
+      border-style: solid;
+      margin: 5px;
+      background-color: white;
+      padding: 5px;
+    }
+
+    .sections {
+      border-color:rgb(0, 0, 0);
+      border: 2px;
+      border-style: solid;
+      margin: 5px;
+      padding: 5px;
+    }
+    
+
+    .sections1 {
+      display: flex;
+      text-align: left;
+      
     }
   

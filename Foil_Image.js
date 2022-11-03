@@ -1,6 +1,7 @@
 const foil1 = new Image();
 const foil2 = new Image();
-const man = new Image();
+const man_top = new Image();
+const man_legs = new Image();
 const foil_pic = new Image();
 const board = new Image();
 var speed = 14;
@@ -17,7 +18,8 @@ function init() {
     
     foil1.src = 'foil1.png';
     foil2.src = 'foil2.png';
-    man.src = 'man.jpg';
+    man_top.src = 'man2.png';
+    man_legs.src = 'man1.png';
     board.src = 'board_only.png';
     foil_pic.src = 'foil_only.png';
     // start animation:
@@ -70,11 +72,11 @@ var shim_output = document.getElementById("shim_num");
 function draw() {
   const ctx = document.getElementById('myCanvas').getContext('2d');
   ctx.globalCompositeOperation = 'destination-over';
-  ctx.clearRect(0, 0, 800, 300); // clear canvas
+  ctx.clearRect(0, 0, 650, 300); // clear canvas
   
   
   // middle of front wing:
-  var front_x = 180;
+  var front_x = 100;
   var front_y = 80;
   var req_lift = 5000;
   
@@ -98,6 +100,8 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
    
    maxspeed = Math.sqrt(req_lift/((cL_max*frontwingsize)-(cl_back_max*backwingsize))); // AoA = 0
    minspeed = Math.sqrt(req_lift/((1*frontwingsize)-(cl_back_min*backwingsize))); // AoA = 15
+
+   // output speeds:
    speed_output.innerHTML = (speed*0.75).toFixed(1);
    speed_output_max.innerHTML = (maxspeed*0.75).toFixed(1);
    speed_output_min.innerHTML = (minspeed*0.75).toFixed(1);
@@ -209,12 +213,21 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
     ctx.stroke();
 
     //draw man/foil picture
-    var foil_x = 650 -(0.5*mid_point);
-    var man_x = 490 + bal_x/2;
-    ctx.drawImage(board,450,140,252,28);
+    var foil_x = 540 -(mid_point);
+    var man_x = 470;
+    var rot_angle = (bal_x-front_x)/100;
+    ctx.drawImage(board,350,140,202,22);
     ctx.restore();
-    ctx.drawImage(man,man_x,10,93,150);
+    ctx.drawImage(man_legs,man_x,92,70,65);
     ctx.drawImage(foil_pic,foil_x,160,136,96);
+
+    // rotate top of man and draw:
+    ctx.save();
+  ctx.translate(man_x+35,117);
+  ctx.rotate(rot_angle);
+  ctx.drawImage(man_top,-35,-90,70,95);
+  ctx.restore();
+    
     
 
   

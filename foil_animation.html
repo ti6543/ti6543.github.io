@@ -19,21 +19,26 @@
       </div>
     
     
-    <nav>
+      <nav>
         <ul class="nav">
           <li ><a href="index.html">Home</a></li>
-          <li class="list1" ><a href="C:\Users\tsabe\technique.html">Wingfoil technique</a>
+          <li class="list1">Weather
+            <div class="nav1">
+              <a href="SouthEastWeather.html" style="display:block">South East Weather</a>
+          </div>
+          </li>
+          <li class="list1" >Wingfoil technique</a>
             <div class="nav1">
                 <a href="C:\Users\tsabe\technique.html" style="display:block">Beginner</a>
                 <a href="C:\Users\tsabe\technique.html" style="display:block">Intermediate</a>
             </div>
           </li>
-          <li class="list1"><a href="C:\Users\tsabe\howfoilworks.html">Knowledge</a>
+          <li class="list1">Knowledge</a>
             <div class="nav1">
-              <a href="C:\Users\tsabe\technique.html" style="display:block">What is a hydrofoil?</a>
+              <a href="whatisahyrdofoil.html" style="display:block">What is a hydrofoil?</a>
               <a href="C:\Users\tsabe\technique.html" style="display:block">Front wings and stabilisers</a>
               <a href="C:\Users\tsabe\technique.html" style="display:block">How a foil is controlled</a>
-                <a href="foil_animation.html" style="display:block">Balancing the foil</a>
+                <a href="foil_animation.html" style="display:block">Foil balance simulator</a>
                 <a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a>
                 <a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a>
               </div>
@@ -41,6 +46,8 @@
         </ul>
   
       </nav>
+
+      <div class = 'activity'>
     
     <h1>Foil balance simulator</h1>
 
@@ -48,17 +55,20 @@
 
     <h3>How to use:</h3>
       <ul>
-        <li>Adjust the setup on the right of the screen</li>
-        <li>You can change the speed at the bottom. It is limited by the setup</li>
+        <li>Adjust the foil setup</li>
+        <li>You can change the speed at the bottom. Bigger front foils mean slower stall and top speeds</li>
         <li>The circle at the bottom shows where the balance point of the foil is - this is where the rider needs to stand</li>
         <li>The line underneath shows the limits of balance point at low and high speed.</li>
         <li>A long line underneath means a very stable setup. Good for beginners going at a constant speed on flat water. The downside is that at faster speeds, the rider weight needs to be very far forward</li>
         <li>A short line underneath is better for wave riding, where speeds vary a lot. You do need to be more accurate with your weight, so better for advanced riders</li>
       </ul>
       
-      <div class="foiljava">
-        <canvas id="myCanvas" width="800" height="300"></canvas>
+      
+        <div class = "diagrams">
+          <canvas id="myCanvas" width="650" height="300"></canvas>
+        </div>
         
+      <div class="foiljava">
         <div>
           <div class = "slider">
             <div class="slidecontainer">
@@ -94,7 +104,7 @@
           </div>
           
         </div>
-      </div>
+      
 
       <div class = "slider">
         <div class="slidecontainer">
@@ -104,7 +114,7 @@
         <p id="speed_output">15</p>
         <p>kts</p>
         
-        </div>
+      </div>
         <table>
           <tr>
             <td>Stall Speed:</td>
@@ -117,7 +127,7 @@
             <td>kts</td>
           </tr>
         </table>
-      
+      </div>
 
       <script type="text/javascript" src="Foil_Image.js"></script>
 
@@ -130,6 +140,7 @@
         <li>The speeds are relative only, and not meant to be an accurate model. Different front wings of the same area can have varying top speeds</li>
       </ul>
 
+      </div>
       
       <div class=footer>Copyright &copy; 2022 
         Tim Sabey. All rights reserved. Used with permission.
