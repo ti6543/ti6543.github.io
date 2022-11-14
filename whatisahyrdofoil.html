@@ -21,6 +21,26 @@
     
       <script src="nav.js"></script>
 
+      <div class = "page">
+
+        <div class="sidebar">
+          <h2>Knowledge</h2>
+          <ul>
+            <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+            <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+            <li><a href="C:\Users\tsabe\technique.html" style="display:block">How a foil is controlled</a></li>
+            <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+            <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+            <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+          </ul>
+        </div>
+  
+        <script>
+          var currentURL = window.location.pathname.split("/").pop()
+          console.log(currentURL);
+          document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+        </script>
+
       <div class = 'activity'>
         <h2>What is a hydrofoil?</h2>
         <p>A hydrofoil is an object that produces a lift force when passing through water:</p>
@@ -31,12 +51,23 @@
 
         <p>A consequence of producing lift is that it also induces drag (more on this later)</p>
 
-        <p>How much lift it creates is dependent on three things:</p>
-        <ol>
-            <li><b>Size and shape</b> of the foil</li>
-            <li><b>Speed</b> of the foil through the water</li>
-            <li><b>Angle of Attack</b> of the foil</li>
-        </ol>
+        
+        
+
+
+        
+          <h3>How much lift it creates is dependent on three things:</h3>
+          <div class = "sections1">
+            <div class = "diagrams">
+               <img src="lift_formula.jpg" height="120px" width = "240px"/>
+            </div>
+              <ol>
+                <li><b>Size and shape</b> of the foil</li>
+                <li><b>Speed</b> of the foil through the water</li>
+                <li><b>Angle of Attack</b> of the foil</li>
+              </ol>
+          </div>
+        
         
         <div class = "sections">
         <h3>1. Size and shape</h3>
@@ -73,7 +104,7 @@
       
         <h2>Controlling the foil</h2>
 
-        <p>We always need the foil to be producing the correct amount of lift, at a range of speeds. Too little and we sink back down to the water, whilst too much results in us flying up into the air (breaching).</p>
+        <p>We always need the foil to be producing the correct amount of lift, equal to the weight of the rider. This needs to be at a range of speeds. Too little lift and we sink back down to the water, whilst too much results in us flying up into the air (breaching).</p>
         <p>The rider will control the amount of lift by varying the Angle of Attack. At slow speeds a high Angle of Attack is required, and at high speeds a low Angle of Attack</p>
 
         <div id = "slowfast">
@@ -89,7 +120,7 @@
 
       </div>
 
-    
+      </div>
 
     
       

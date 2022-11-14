@@ -21,6 +21,27 @@
     
       <script src="nav.js"></script>
 
+      <div class = "page">
+
+      <div class="sidebar">
+        <h2>Knowledge</h2>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
       <div class = 'activity'>
         <h2>Front Wings and Stabilisers</h2>
         <p>A foiling setup consists of three parts (plus a mast to connect it to the board)</p>
@@ -65,11 +86,20 @@
           </div>
 
 
+      
+
+      <h2>Why do we have a stabiliser?</h2>
+
+      
+        <h3>Weight shift stability</h3>
+        <p>If we had no stabiliser, the rider must position their weight very accurately over the centre of lift of the front wing. If the rider is in the wrong place by a tiny amount, the setup rapidly pitches up or down. By having a fuselage and stabiliser, the rider weight can be in the wrong place and the pitch change is a lot slower, giving them time to readjust their weight. Bigger stabilisers and longer fuselages make the setup more stable.   </p>
+        <h3>Turbulence stability</h3>
+        <p>Imagine a rider is foiling along totally balanced, but hits a bit of turbulence that changes the Angle of Attack. This has an opposite effect on Front Wing and Stabiliser, meaning the setup tries to pitch back to where it was. For example, if the turbulence increases the overall Angle of Attack, the front wing produces more lift, and the stabiliser less lift. Because the front wing pitches nose down, and the stabiliser nose up, this rotates the foil setup back to where it was.</p>
+      
       </div>
-
     
 
-    
+      </div>
       
       <div class=footer> <p>UK Wingfoiling</p>
       </div>

@@ -1,5 +1,4 @@
 
-
 #title {
   color: black;
   margin-left: 50px;
@@ -13,7 +12,6 @@
   flex-direction: row;
 }
 
-
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -22,7 +20,6 @@
   background: #04AA6D;
   cursor: pointer;
 }
-
 
 .foiljava { 
   display: flex;
@@ -36,20 +33,50 @@
 
 img {
   margin-left: 0px;
-  
 }
 
 div.header {
-  
   background-color: #3D99CE;
-  
   padding-top: 5px ;
   padding-bottom: 5px;
-
-  
 }
 
+.page {
+  display: flex;
+}
 
+.sidebar {
+  background-color: #3D99CE;
+  width: 500px;
+ margin-right: 4px;
+ padding-left: 0px;
+ text-align: left;
+ font-size: 16px;
+ 
+}
+
+.sidebar > ul {
+  list-style: none;
+  display: inline-block;
+  padding: 5px;
+  padding-top: 0px;
+  margin: 0;
+}
+
+.sidebar > ul > li > a {
+ padding-bottom: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar > ul >li  a:hover {
+  background-color: #296f98;
+}
+
+.current-link {
+  color:white;
+  background-color: #296f98;
+}
 
   body {
     background-color: rgb(254, 251, 246);
@@ -67,8 +94,7 @@ div.header {
 
   .activity {
     background-color: rgba(254, 251, 246, 0.762);
-    padding: 10px;
-    
+    padding: 5px;
   }
 
   ul.nav {
@@ -83,7 +109,6 @@ div.header {
   }
   ul.nav > li:hover {
     background-color: #296f98;
-    
   }
 
   ul.nav > li {
@@ -158,6 +183,7 @@ div.header {
       border-style: solid;
       margin: 5px;
       padding: 5px;
+      width: 700px;
     }
     
 
