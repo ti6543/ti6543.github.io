@@ -16,7 +16,7 @@ var navbar = ` <nav>
   <li class="list1">Knowledge</a>
     <div class="nav1">
       <a href="whatisahyrdofoil.html" style="display:block">What is a hydrofoil?</a>
-      <a href="C:\Users\tsabe\technique.html" style="display:block">Front wings and stabilisers</a>
+      <a href="frontwingsandstabs.html" style="display:block">Front wings and stabilisers</a>
       <a href="C:\Users\tsabe\technique.html" style="display:block">How a foil is controlled</a>
         <a href="foil_animation.html" style="display:block">Foil balance simulator</a>
         <a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a>
