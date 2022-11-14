@@ -36,23 +36,35 @@ img {
 }
 
 div.header {
+  position: fixed;
   background-color: #3D99CE;
-  padding-top: 5px ;
+  top:0px;
+  left: 0px;
   padding-bottom: 5px;
+  width: 2000px;
+  height: 60px;
+  
 }
 
 .page {
   display: flex;
+  
 }
 
 .sidebar {
+  position: fixed;
+  top: 97px;
+  left:0px;
   background-color: #3D99CE;
-  width: 500px;
+  width: 200px;
+  height:2000px;
  margin-right: 4px;
  padding-left: 0px;
  text-align: left;
  font-size: 16px;
- 
+ border-style: solid;
+ border-color: black;
+  border-width: 2px;
 }
 
 .sidebar > ul {
@@ -83,8 +95,8 @@ div.header {
     background-image: url('background1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    
   }
+
   h1 {
     color: rgb(0, 0, 0);
   }
@@ -94,10 +106,20 @@ div.header {
 
   .activity {
     background-color: rgba(254, 251, 246, 0.762);
-    padding: 5px;
+    padding: 0px;
+    padding-top: 140px;
+    padding-left: 205px;
   }
 
   ul.nav {
+    position: fixed;
+    top: 49px;
+    left:0px;
+    border-style: solid;
+ border-color: black;
+  border-width: 2px;
+    height: 30px;
+    width: 2000px;
     padding-left: 10px;
     background-color: #3D99CE;
     text-align: left;
