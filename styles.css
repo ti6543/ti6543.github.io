@@ -65,6 +65,7 @@ div.header {
  border-style: solid;
  border-color: black;
   border-width: 2px;
+  z-index: 0;
 }
 
 .sidebar > ul {
@@ -123,7 +124,7 @@ div.header {
     padding-left: 10px;
     background-color: #3D99CE;
     text-align: left;
-    
+    z-index: 1;
   }
   ul.nav > li {
     display: inline-block;
@@ -218,6 +219,10 @@ div.header {
     .windguru{
       width: 450px;
       padding: 5px;
+    }
+
+    .top_windguru {
+      margin-top: 100px;
     }
 
     .windgurucontainer{
