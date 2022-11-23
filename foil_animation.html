@@ -20,6 +20,26 @@
     
       <script src="nav.js"></script>
 
+      <div class="page">
+
+        <div class="sidebar">
+          <h3>Knowledge</h3>
+          <ul>
+            <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+            <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+            <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+            <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+            <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+            <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+          </ul>
+        </div>
+  
+        <script>
+          var currentURL = window.location.pathname.split("/").pop()
+          console.log(currentURL);
+          document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+        </script>
+
       <div class = 'activity'>
     
     <h1>Foil balance simulator</h1>
@@ -90,12 +110,12 @@
       </div>
         <table>
           <tr>
-            <td>Stall Speed:</td>
+            <td>Stall:</td>
             <td id="speed_min">15</td>
             <td>kts</td>
           </tr>
           <tr>
-            <td>Max Speed:</td>
+            <td>Max:</td>
             <td id="speed_max">15</td>
             <td>kts</td>
           </tr>
@@ -114,9 +134,12 @@
       </ul>
 
       </div>
+
       
       <div class=footer>Copyright &copy; 2022 
         Tim Sabey. All rights reserved. Used with permission.
+      </div>
+
       </div>
     
 </body>

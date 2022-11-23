@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Riding a foil</h2>
+        
+        <p>On this page we'll look at how a foil is controlled by the rider</p>
+        <p>To recap, lift is determined by the following:</p>
+
+        <div class = "diagrams">
+            <img src = "lift_formula.jpg" width="200px" height="100px" />
+        </div>
+
+        <p>And secondly that lift is controlled by the rider by changing the Angle of Attack:</p>
+
+        <div class = "diagrams">
+          <img src = "AoA2.jpg" width="200px" height="100px" />
+        </div>
+
+      <p>Lift must always be equal to rider weight. At low speeds, we therefore need a high Angle of Attack. At higher speeds, the Angle of Attack is reduced.</p>
+
+      <div class = "sections1">
+      <div class = "diagrams">
+        <img src = "Man_slow.png" width="180px" height="150px" />
+        <p>Slow speed and high Angle of Attack</p>
+      </div>
+      <div class = "diagrams">
+        <img src = "Man_fast.png" width="180px" height="150px" />
+        <p>High speed and low Angle of Attack</p>
+      </div>
+    </div>
+
+    <h2>The effect of speed on the balance point</h2>
+
+    <div class="sections1">
+      <div class = "diagrams">
+        <img src = "highspeed.jpg" width="400px" height="360px" />
+      </div>
+      <div>
+      <p>We've just seen that the foil will have a lower Angle of Attack at increased speed. </p>
+      <p>However, because the stabiliser is upside down, any decrease in Angle of Attack on the front wing INCREASES Angle of Attack on the stabiliser.</p>
+      <p>This increases the downward lift, which shifts the balance point forward. As a consequence the rider needs to have their weight further foward at higher speeds.</p>
+      <p>The foil setup (fuselage length, stabiliser size, shim) will affect how far forward the rider will need to move their weight at higher speeds. More on this later.</p>
+      </div>
+      
+    </div>
+      
+    
+</body>
+
+</html>
