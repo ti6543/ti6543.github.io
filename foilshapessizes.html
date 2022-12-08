@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+          <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Foil shapes and sizes</h2>
+
+        
+    </div>
+    
+</body>
+
+</html>

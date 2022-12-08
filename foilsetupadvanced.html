@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+          <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="drag.html" style="display:block">Drag</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Foil setup (Advanced)</h2>
+
+        <p>On the foil setup page, we saw how to set up the board and foil so that it is balanced for cruising speed. We can however change various aspects of the setup to change how it rides</p>
+
+        <p>From earlier, we learnt that the balance point shifts forward at higher speeds</p>
+
+        <div class = "diagrams">
+            <img src = "highspeed.jpg" width="250px" height="250px" />
+        </div>
+
+        <p>We can however change how far the balance point moves with changing speed</p>
+
+
+        <h4>Stable (Beginner) setup</h4>
+        <p>For this we have a setup with:</p>
+        <ul>
+            <li>Big stabiliser (relative to front foil)</li>
+            <li>Long Fuselage</li>
+            <li>Negative shim</li>
+        </ul>
+
+        <p>This setup means that the balance point moves a lot with speed. The upside of this, is that the rider doesn't need to be as accurate with their weight, which is why it is better for beginners.</p>
+        <p>If the rider has their weight in the wrong place, the nose will either rise or fall, but slowly. This gives them time to react and get their weight into the correct position.</p>
+        <p>The whole setup is also more stable in terms of water turbulence</p>
+        <p>The downside is that the comfortable speed range is quite small. If the setup is going too fast, the stabiliser is producing so much downforce that the rider needs their weight very far forward.</p>
+
+
+        <h4>Advanced setup</h4>
+        <p>For this we need:</p>
+        <ul>
+            <li>Small stabiliser (relative to front foil)</li>
+            <li>Positive shim</li>
+            <li>Short Fuselage</li>
+        </ul>
+
+        <p>This is better for an advanced rider, who is able to finely tune their weight.</p>
+        <p>It means that at high speeds, the rider doesn't need to move their weight as far forward. This is very useful for going down steep swell faces.</p>
+        <p>It also reduces swing weight. Swing weight is the amount of board weight that is pivoting around the mast</p>
+        
+    </div>
+    
+</body>
+
+</html>

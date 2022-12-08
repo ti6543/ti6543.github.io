@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+          <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="drag.html" style="display:block">Drag</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Drag</h2>
+
+        <p>Foils produce drag when going through the water. There are two types of drag that affect foils:</p>
+        <ol>
+          <li>Parasitic drag - this is the drag caused by the resistance of the water. It increases as the square of the speed. </li>
+          <li>Induced drag - this is the drag cause by creating lift, which induces vortices. This is bigger at high Angles of Attack (slow speeds) </li>
+        </ol>
+        
+        <p>Total drag is the combination of the two:</p>
+
+        <div class="sections1">
+        <div class = "diagrams">
+          <img src = "drag.jpg" width="300px" height="250px" />
+      </div>
+      <p>From the graph we can see that there is a moderate speed at which drag is at a minimum. We call this Minimum-Drag speed. This speed is the most efficient and requires the least amount of power from the sail/wing or wave. If you are doing a low power activity like pump-foiling, you will want to do it at this speed.</p>
+    </div>
+
+    <h3>Stable and unstable speed</h3>
+
+    <p>We call the plot of total drag against speed the "drag curve"</p>
+    <p>Because of the shape of the drag curve, we can break it down into two regions:</p>
+
+    
+
+    <div class="sections1">
+    <div class = "diagrams">
+      <img src = "speedstableunstable.jpg" width="400px" height="300px" />
+    </div>
+    <ol>
+      <li>SPEED UNSTABLE - here, any decrease in speed increases drag. With no increase in power, this results in a further loss of speed, leading to a stall </li>
+      <li>SPEED STABLE - here, a decrease in speed reduces drag, so less power is needed to maintain the new speed.</li>
+    </ol>
+    <p>We always want to be riding in the speed stable region.</p>
+    </div>
+
+
+    
+
+    </div>
+    
+</body>
+
+</html>

@@ -18,6 +18,8 @@ var navbar = ` <nav>
       <a href="whatisahyrdofoil.html" style="display:block">What is a hydrofoil?</a>
       <a href="frontwingsandstabs.html" style="display:block">Front wings and stabilisers</a>
       <a href="ridingafoil.html" style="display:block">How a foil is controlled</a>
+      <a href="foilsetup.html" style="display:block">Foil setup</a>
+      <a href="foilsetupadvanced.html" style="display:block">Foil setup (advanced)</a>
         <a href="foil_animation.html" style="display:block">Foil balance simulator</a>
         <a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a>
         <a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a>

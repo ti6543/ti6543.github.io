@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+          <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="drag.html" style="display:block">Drag</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Foil setup</h2>
+
+        <p>Foilers, especially beginners, are often very confused about how to set up and tune their equipment</p>
+        <p>Poorly setup kit will either never get them on the foil, or buck them off immediately. The mast position in the track only needs to be an inch out to result in a very difficult ride</p>
+
+        <h3>Balance point</h3>
+
+        <p>Remember that previously we said that every combination of front wing, fuselage and stabiliser ( at a given speed) will have a balance point. When the rider is above the balance point, the board stays level</p>
+        <div class = "sections1">
+            <div class = "diagrams">
+            <img src = "foil6.jpg" width="300px" height="150px" />
+          </div>
+
+        
+        <div class = "diagrams">
+            <img src = "man_board.jpg" width="200px" height="150px" />
+            <p>Rider directly above the balance point</p>
+          </div>
+
+        </div>
+
+<p>If the rider is not in the correct position:</p>
+
+          <div class = "sections1">
+            <div class = "diagrams">
+                <img src = "man_board1.jpg" width="200px" height="150px" />
+                <p>If the balance point is forward of the rider, the nose lifts</p>
+              </div>
+            <div class = "diagrams">
+                <img src = "man_board2.jpg" width="200px" height="150px" />
+                <p>If the balance point is aft  of the rider, the nose drops</p>
+            </div>
+
+          </div>
+
+        <h3>Adjusting the balance point</h3>
+        <p>We want to adjust the balance point of the foil so that it matches where the rider wants to stand at cruising speed. There are a few ways to do this:</p>
+        <ol>
+          <li class="listmargin"> 
+            <p>The simplest way is to move the foil in the track:</p>
+            <ul>
+              <li>Moving the mast forward in the track moves the balance point forward. This means more nose up rotation.</li>
+              <li>Moving the mast back in the track moves the balance point back. This means less nose up rotation.</li>
+            </ul>
+            <div class = "diagrams">
+              <img src = "mast_track.jpg" width="200px" height="150px" />
+            </div>
+            <div ></div>
+          </li>
+          <li class="listmargin">A bigger stabiliser relative to the front foil will induce more nose-up rotation (moves balance point forward)</li>
+          <li class="listmargin">A longer fuselage will induce more nose-up rotation (moves balance point forward)*</li>
+          <li class="listmargin">
+            <p>Shims on the stabiliser can change the balance point by reducing or increasing the downward lift of the stabiliser:</p>
+            <div class="sections1">
+            <div class = "diagrams">
+              <img src = "shims.jpg" width="250px" height="300px" />
+            </div>
+            <div>
+              <p>Positive shims reduce the amount of downward lift the stabiliser creates. This reduces nose up rotation.</p>
+              <p>Negative shims increase the amount of downward lift the stabiliser creates. This increases nose up rotation.</p>
+            </div>
+          </div>
+          </li>
+          <li class="listmargin">Some foil brands also allow multiple fuselage to mast positions (Slingshot Hoverglide, Shinn). This can push the foil further foward or back in relation to the board.</li>
+        </ol>
+
+        <p>*This can depend on the brand, and which way the fuselage is extending. Typically they extend rearward though.</p>
+
+        <h3>Front foil size</h3>
+        <p>Changing the front foil can also alter the balance point. When learning, riders typically start with a large foil, then when they get competent move to a smaller one. </p>
+        <p>What effect does this have? The lift from the front foil has to be roughly the same - it needs to be to support the rider. This is achieved by going faster. However, the stabiliser is now producing more downward lift, rotating the nose up. </p>
+        <p>This means the foil has to go back in the track to compensate. An even better solution is to use a smaller stabiliser and/or shorter fuselage</p>
+        <p>This however isn't the full story. With some brands(Armstrong, Go Foil, Slingshot Hoverglide, etc) the foil is slotted on to the front of the fuselage. This means that any smaller foil when attached has a Centre of Lift that is further back than when using a bigger foil. This increases the downward pitching rotation from the front wing, and can nullify the increased pitch up from the stabiliser. </p>
+      
+
+      <h3>Setting up board and foil</h3>
+
+      <p>You may be thinking - rather than adjust the balance point, why not just stand further forward or back? - The answer is that you can do this, but it may put the rider in the wrong position on the board</p>
+
+      <p>When not foiling, the rider needs to stand above the centre of buoyancy. If they aren't, then the nose or tail of the board will sink.</p>
+      <div class = "diagrams">
+        <img src = "man_board_float_neutral.jpg" width="300px" height=200px" />
+      </div>
+
+      <p>Once this position has been established, we then need to set the foil up so that the balance point lines up with the centre of buoyancy. This means the rider won't have to shift their weight once on the foil.</p>
+
+      <div class = "diagrams">
+        <img src = "man_board_buoyancy_perfect.jpg" width="300px" height=200px" />
+      </div>
+
+      <p>So, to set the board up:</p>
+      <ol>
+        <li>Firstly, establish where the rider needs to stand off the foil. If using footstraps, you can then set these in this position</li>
+        <li>Then, adjust the foil setup using the techniques above so that the balance point is in the correct position</li>
+      </ol>
+
+      <p>Once properly set up, the rider can get onto the foil without adjusting their weight</p>
+
+      <h3>Summary</h3>
+
+      <p>If the board fails to rise as it accelerates, or the rider needs excessive backfoot pressure to keep the board in the air:</p>
+      <ol>
+        <li>Move the mast forward in the foil box</li>
+        <li>If this fails, you can:
+          <ul>
+            <li>Add negative shims</li>
+            <li>Use a bigger stabiliser</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>If the board nose flies up into the air uncontrollably , or the rider needs excessive front foot pressure to keep the board nose down:</p>
+      <ol>
+        <li>Move the mast back in the foil box</li>
+        <li>If this fails, you can:
+          <ul>
+            <li>Add positive shims</li>
+            <li>Use a smaller stabiliser</li>
+          </ul>
+        </li>
+      </ol>
+
+
+    </div>
+    
+</body>
+
+</html>

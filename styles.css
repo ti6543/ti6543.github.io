@@ -232,3 +232,6 @@ div.header {
       flex-wrap: wrap;
     }
   
+    .listmargin {
+      margin: 10px;
+    }
