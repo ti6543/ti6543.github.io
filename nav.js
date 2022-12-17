@@ -21,7 +21,8 @@ var navbar = ` <nav>
       <a href="foilsetup.html" style="display:block">Foil setup</a>
       <a href="foilsetupadvanced.html" style="display:block">Foil setup (advanced)</a>
         <a href="foil_animation.html" style="display:block">Foil balance simulator</a>
-        <a href="C:\Users\tsabe\technique.html" style="display:block">Foil shapes & sizes</a>
+        <a href="drag.html" style="display:block">Drag</a>
+        <a href="foilshapessizes.html">Foil shapes & sizes</a>
         <a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a>
       </div>
    </li>

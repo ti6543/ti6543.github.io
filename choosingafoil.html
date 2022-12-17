@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+          <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+          <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="drag.html" style="display:block">Drag</a></li>
+          <li><a href="foilshapessizes.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="choosingafoil.html" style="display:block">Choosing a foil</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Choosing a foil</h2>
+
+        <p>From the previous page, you should now have a good idea of the properties a foil can have:</p>
+        <ul>
+            <li class = "listmargin">Size in cm2
+                <div class="sections1">
+                <ul>Bigger
+                    <li>Lower takeoff speed required</li>
+                    <li>Able to maintain lift at slower speeds</li>
+                    <li>Better for heavier riders</li>
+                    <li>Better for beginners</li>
+                </ul>
+                <ul>Smaller
+                    <li>Faster top speeds</li>
+                    <li>Better turning</li>
+                </ul>
+                </div>
+            </li>
+            <li class = "listmargin">Thickness
+                <div class="sections1">
+                <ul>Thicker
+                    <li>More lift</li>
+                    <li>Easier to control</li>
+                </ul>
+                <ul>Thinner
+                    <li>Faster</li>
+                    <li>Slightly better glide</li>
+                </ul>
+                </div>
+            </li>
+            <li class = "listmargin">Aspect Ratio
+                <div class="sections1">
+                <ul>High Aspect
+                    <li>More lift</li>
+                    <li>Less drag</li>
+                    <li>Better glide</li>
+                </ul>
+                <ul>Low Aspect
+                    <li>Easier to control</li>
+                    <li>Better turning</li>
+                </ul>
+                </div>
+            </li>
+        </ul>
+
+        <p>What foil or foils you choose is going to be based on:</p>
+        <ol>
+            <li>Your activity</li>
+            <li>Your ability level</li>
+            <li>Power available - wind strength, wave steepness etc</li>
+            <li>Waves/Swell - the type of waves and swell you are riding</li>
+        </ol>
+
+        <h3>Flat water - winging/windfoil</h3>
+
+        <h4>Beginners</h4>
+        <p>Beginners will want an easy to use, easy to lift foil. So big, thick and low to mid Aspect. More confident beginners may look to go more toward the thinner mid-Aspect foils, that they can keep and use as a light wind foil when they are more advanced.</p>
+
+        <h4>Intermediates</h4>
+        <p>Once learning to gybe and starting to ride swell, a medium sized Mid Aspect foil will suit these riders</p>
+
+        <h4>Advanced - freestyle</h4>
+        <p></p>
+
+        <h4>Advanced - racing/speed</h4>
+        <p>Here, the smallest thin high Aspect foil will get the best speeds. The problem will be getting up onto the foil. This may require a bigger modern DW SUPfoil type shape.</p>
+
+        <h3>Flat water pumping</h3>
+
+        <p>For this, we need the least drag per unit of lift. This means a High Aspect foil.</p>
+        <p>Slower is better for us, because there is drag from the rider going through the air that scales as the square of speed. This means a big foil for lowest drag.</p>
+        
+        <h3>Low Power</h3>
+
+        <p>To get foiling in a low power scenario (e.g. light wind winging, shallow swell), we need lift at lower speeds</p>
+        <p>From the lift equation with low speed, we need to increase S (size) and cL (Lift coefficient)</p>
+
+
+
+        <h3>Swell and Waves</h3>
+
+        <p>Choosing a foil to use in swell/waves will make a big difference to how you ride</p>
+
+        <h4>Wave speed and steepness</h4>
+
+        <p>When riding waves, we need to match the foil speed range to the wave speed. How fast do waves travel? The answer depends on whether we are talking about ocean swell, or breaking waves</p>
+        
+        <h4>Unbroken swell</h4>
+        <p>Swell in deep water travels at 1.56*period in knots. So weak windswell (short period) is going around 10kts, but proper groundswell (long period) will be going at 20ks+</p>
+        <p>If you're downwinding, or riding swell out to sea, these are the speeds you'll be interested in</p>
+        <p>When downwinding, you'll be using swell that is soft, so low drag is important</p>
+        <p>So ideally, we need a foil that:</p>
+        <ul>
+            <li>Has low drag to cope with flat areas - high Aspect. Thinner will help reduce drag at higher speeds (groundswell)</li>
+            <li>If groundswell, a smaller foil to keep up with high speeds</li>
+        </ul>
+
+        <p>There is an issue with using small foils - getting them onto the foil. Modern SUPfoil board shapes are overcoming this by creating board bottoms that are easier to get foiling, and allow smaller foils to be used. Wingfoiling will be ok provided there is sufficient wind.</p>
+        <p>We're not that bothered with really hard turning, so don't need to worry so much about big wingspans. High Aspect Foils are perfect for this.</p>
+
+
+        <h4>Breaking waves</h4>
+        <p>When waves start getting toward shallow water they slow down, and eventually break. Their speed will reduce, down to 6*Squareroot(depth in metres)</p>
+        <ul>
+        <li>3ft (peak to trough) waves will break in 4ft of water, and have a minimum speed of 6kts</li>
+        <li>6ft (peak to trough) waves will break in 8ft of water, and be minimum speed of 8.5kts</li>
+        </ul>
+        <p>These are minimum speeds. Before the wave breaks, which is often where the best foiling sections are, will be going faster (especially with higher period swells)</p>
+        <p>Better foilers won't be travelling straight with the wave, so can easily double these speeds when riding.</p>
+        <p>Riders need to be able to cope with the acceleration that comes with going down steep bits of wave. This is both in terms of finer AoA adjustments, and balance point movements.</p>
+
+        <p>So ideally, we need a foil that:</p>
+        <ul>
+            <li>Has a fairly low stall/min-drag speed, if waves are smaller</li>
+            <li>Turns well</li>
+            <li>Extra drag helps reduce acceleration and high speed control issues. This can come from reduced Aspect Ratio, and also thicness.</li>
+            <li>Smaller foils reduce high speed control issues</li>
+        </ul>
+
+        <p>Again, smaller foils mean better control, and better turning, but we need to be able to get them going in the first place. Light winds and sizeable waves give a real conundrum as to whether to prioritse ease of foiling versus ease of riding.</p>
+        <p>It's my opinion that Mid Aspect foils are better for breaking waves than High Aspect. </p>
+        <h4></h4>
+
+        
+
+        
+
+
+
+        
+
+      </div>
+    
+</body>
+
+</html>

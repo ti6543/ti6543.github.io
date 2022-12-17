@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wingfoiling Site</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">UK Wingfoiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+      <script src="nav.js"></script>
+
+      <div class="page">
+
+        <div class="sidebar">
+          <h3>Knowledge</h3>
+          <ul>
+            <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+          <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+          <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+          <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+          <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+          <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+          <li><a href="drag.html" style="display:block">Drag</a></li>
+          <li><a href="foilshapessizes.html" style="display:block">Foil shapes & sizes</a></li>
+          <li><a href="choosingafoil.html" style="display:block">Choosing a foil</a></li>
+          </ul>
+        </div>
+  
+        <script>
+          var currentURL = window.location.pathname.split("/").pop()
+          console.log(currentURL);
+          document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+        </script>
+
+      <div class = 'activity'>
+    
+    <h1>Foil Builder</h1>
+
+    <p>Build a custom foil, and see how it will ride</p>
+
+    <h3>How to use:</h3>
+      <ul>
+        <li></li>
+      </ul>
+      
+      
+        <div class = "diagrams">
+          <canvas id="myCanvas" width="700" height="400"></canvas>
+        </div>
+        
+      <div class="foiljava">
+        <div>
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="700" max="2500" value="1500" class="slider" id="frontarea">
+            </div>
+            <p>Foil area:&nbsp</p>
+            <p id="displayfrontarea">1500</p>
+            <p>cm<sup>2</sup></p>
+          </div>
+
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="10" max="30" value="20" class="slider" id="thickness">
+            </div>
+            <p>Thickness:&nbsp</p>
+            <p id="displaythickness">20</p>
+            <p>mm</p>
+          </div>
+
+          <div class = "slider">
+            <div class="slidecontainer">
+              <input type="range" min="2" max="12" value="6" class="slider" id="aspectratio">
+            </div>
+            <p>Aspect Ratio:&nbsp</p>
+            <p id="displayaspectratio">6</p> 
+          </div>
+
+        <p>Width:</p>
+        <p></p>
+          
+        </div>
+      
+
+      
+        
+      </div>
+        
+      </div>
+
+      <script type="text/javascript" src="foilbuilder.js"></script>
+
+      
+      
+
+      </div>
+
+     
+
+      </div>
+    
+</body>
+
+</html>
