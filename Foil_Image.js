@@ -87,7 +87,7 @@ min_AoA =  (backwingsize-4)/4-(shim/5);
 if (AngleOfAttack<min_AoA) {AngleOfAttack = min_AoA};
 var cL_back = (-AngleOfAttack+5-Number(shim))/20;
 // min downward lift at low speed (15 degrees AoA)
-var cl_back_min = -0.5-(shim/20);
+var cl_back_min = -0.5-(Number(shim)/20);
 // max downward lift at high speed (0 degrees AoA)
 var cl_back_max = (-min_AoA+5-Number(shim))/20;
 var cL = (AngleOfAttack+5)/20;
