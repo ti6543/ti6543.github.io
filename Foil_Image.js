@@ -6,13 +6,14 @@ const foil_pic = new Image();
 const board = new Image();
 var speed = 14;
 var fuselage_len = 170;
-var frontwingsize = 37.5;
+var frontwingsize = 35;
   var backwingsize = 8;
   var shim = -2;
   var AngleOfAttack=7.5;
   var displayfrontfoilsize;
   var maxspeed;
   var minspeed;
+  var max_AoA = 12;
 
 function init() {
     
@@ -32,7 +33,7 @@ var speed_output = document.getElementById("speed_output");
 var speed_output_max = document.getElementById("speed_max");
 var speed_output_min = document.getElementById("speed_min");
 speed_slider.oninput = function() {
-    AngleOfAttack = 15-(0.1*speed_slider.value);
+    AngleOfAttack = max_AoA-(0.1*speed_slider.value);
     speed_output.innerHTML = (speed*0.75).toFixed(1);
     speed_output_max.innerHTML = (maxspeed*0.75).toFixed(1);
     speed_output_min.innerHTML = (minspeed*0.75).toFixed(1);
@@ -82,12 +83,13 @@ function draw() {
   
   // back foil lift is positive downward:
 var min_AoA = 0;
+// reduce high speeds with big stabilisers:
 min_AoA =  (backwingsize-4)/4-(shim/5);
 
 if (AngleOfAttack<min_AoA) {AngleOfAttack = min_AoA};
 var cL_back = (-AngleOfAttack+5-Number(shim))/20;
 // min downward lift at low speed (15 degrees AoA)
-var cl_back_min = -0.5-(Number(shim)/20);
+var cl_back_min = (-max_AoA+5-Number(shim))/20;
 // max downward lift at high speed (0 degrees AoA)
 var cl_back_max = (-min_AoA+5-Number(shim))/20;
 var cL = (AngleOfAttack+5)/20;
@@ -109,8 +111,8 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
    
   
   
-  var front_lift_max = cL_max*frontwingsize*maxspeed*maxspeed; // AoA = 0
-  var front_lift_min = 1*frontwingsize*minspeed*minspeed; // AoA = 15
+  var front_lift_max = cL_max*frontwingsize*maxspeed*maxspeed; // AoA = min_AoA
+  var front_lift_min = 1*frontwingsize*minspeed*minspeed; // AoA = max_AoA
   var back_lift_max = cl_back_max*backwingsize*maxspeed*maxspeed;
   var back_lift_min = cl_back_min*backwingsize*minspeed*minspeed;
 
