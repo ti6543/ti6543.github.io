@@ -25,7 +25,7 @@ var navbar = ` <nav>
   <div class="nav1">
       <a href="foiling.html" style="display:block">Getting Foiling</a>
       <a href="gybing.html" style="display:block">Gybing</a>
-      
+      <a href="waveriding.html" style="display:block">Wave Riding</a>
   </div>
 </li>
 

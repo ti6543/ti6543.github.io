@@ -94,6 +94,7 @@ var cl_back_min = (-max_AoA+5-Number(shim))/20;
 var cl_back_max = (-min_AoA+5-Number(shim))/20;
 var cL = (AngleOfAttack+5)/20;
 var cL_max = (min_AoA+5)/20;
+var cL_min = (max_AoA+5)/20;
 speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   
   var front_lift = cL*frontwingsize*speed*speed;
@@ -101,7 +102,7 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
 
    
    maxspeed = Math.sqrt(req_lift/((cL_max*frontwingsize)-(cl_back_max*backwingsize))); // AoA = 0
-   minspeed = Math.sqrt(req_lift/((1*frontwingsize)-(cl_back_min*backwingsize))); // AoA = 15
+   minspeed = Math.sqrt(req_lift/((cL_min*frontwingsize)-(cl_back_min*backwingsize))); // AoA = 15
 
    // output speeds:
    speed_output.innerHTML = (speed*0.75).toFixed(1);
