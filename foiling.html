@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>Understanding Foiling</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body>
+
+    
+      <div class="header">
+        <h1 id="title">Understanding Foiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+        <div class="sidebar">
+          <h3>Technique</h3>
+          <ul>
+            <li><a href="foiling.html" >Getting foiling</a></li>
+          <li><a href="gybing.html" >Gybing</a></li>
+          <li><a href="riding.html" style="display:block">Wave riding</a></li>
+          
+          </ul>
+        </div>
+  
+        <script>
+          var currentURL = window.location.pathname.split("/").pop()
+          console.log(currentURL);
+          document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+        </script>
+
+      <div class = 'activity'>
+        <h2>Getting Foiling</h2>
+        
+        <p>The first thing we need to learn when wingfoiling, is how to get up onto the foil</p>
+          <p>From the Foil Knowledge section, we know that lift is determined as</p>
+          <div class = "sections1">
+            <div class = "diagrams">
+               <img src="lift_formula.jpg" height="120px" width = "240px"/>
+            </div>
+              <ol>
+                <li><b>Size</b> of the foil</li>
+                <li><b>Speed</b> of the foil through the water</li>
+                <li><b>Lift Coefficient</b> - (related to the <b>Angle of Attack</b> of the foil)</li>
+              </ol>
+          </div>
+        
+        
+
+      </div>
+
+    
+    
+</body>
+
+</html>

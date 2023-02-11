@@ -2,18 +2,10 @@ var navbar = ` <nav>
 <link rel="stylesheet" href="styles.css">
 <ul class="nav">
   <li ><a href="index.html">Home</a></li>
-  <li class="list1">Weather
-    <div class="nav1">
-      <a href="SouthEastWeather.html" style="display:block">South East Weather</a>
-  </div>
-  </li>
-  <li class="list1" >Wingfoil technique</a>
-    <div class="nav1">
-        <a href="C:\Users\tsabe\technique.html" style="display:block">Beginner</a>
-        <a href="C:\Users\tsabe\technique.html" style="display:block">Intermediate</a>
-    </div>
-  </li>
-  <li class="list1">Knowledge</a>
+
+
+
+  <li class="list1">Foil Knowledge</a>
     <div class="nav1">
       <a href="whatisahyrdofoil.html" style="display:block">What is a hydrofoil?</a>
       <a href="frontwingsandstabs.html" style="display:block">Front wings and stabilisers</a>
@@ -26,10 +18,26 @@ var navbar = ` <nav>
         <a href="C:\Users\tsabe\technique.html" style="display:block">Glide, speed & waves</a>
       </div>
    </li>
-</ul>
 
+   
+
+  <li class="list1" >Wingfoil technique</a>
+  <div class="nav1">
+      <a href="foiling.html" style="display:block">Getting Foiling</a>
+      <a href="gybing.html" style="display:block">Gybing</a>
+      
+  </div>
+</li>
+
+   <li class="list1">Weather
+    <div class="nav1">
+      <a href="SouthEastWeather.html" style="display:block">South East Weather</a>
+  </div>
+  </li>
+
+</ul>
 </nav>`;
 
 document.body.insertAdjacentHTML("beforeend", navbar);
 
-// Hello
+//Hello
