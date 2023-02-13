@@ -84,11 +84,11 @@ function draw() {
   // back foil lift is positive downward:
 var min_AoA = 0;
 // reduce high speeds with big stabilisers:
-min_AoA =  (backwingsize-4)/4-(shim/5);
+min_AoA =  (backwingsize-4)/4-(shim/5)-1;
 
 if (AngleOfAttack<min_AoA) {AngleOfAttack = min_AoA};
 var cL_back = (-AngleOfAttack+5-Number(shim))/20;
-// min downward lift at low speed (15 degrees AoA)
+// min downward lift at low speed (12 degrees AoA)
 var cl_back_min = (-max_AoA+5-Number(shim))/20;
 // max downward lift at high speed (0 degrees AoA)
 var cl_back_max = (-min_AoA+5-Number(shim))/20;
@@ -102,7 +102,7 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
 
    
    maxspeed = Math.sqrt(req_lift/((cL_max*frontwingsize)-(cl_back_max*backwingsize))); // AoA = 0
-   minspeed = Math.sqrt(req_lift/((cL_min*frontwingsize)-(cl_back_min*backwingsize))); // AoA = 15
+   minspeed = Math.sqrt(req_lift/((cL_min*frontwingsize)-(cl_back_min*backwingsize))); // AoA = 12
 
    // output speeds:
    speed_output.innerHTML = (speed*0.75).toFixed(1);
@@ -117,8 +117,17 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   var back_lift_max = cl_back_max*backwingsize*maxspeed*maxspeed;
   var back_lift_min = cl_back_min*backwingsize*minspeed*minspeed;
 
-  var max_drag = front_lift_max+back_lift_max;
-  if (back_lift_max<0) {drag = front_lift_max-back_lift_max};
+  var frontwingdrag =frontwingsize*speed*speed*(((speed*speed)/(maxspeed*maxspeed))+cL);
+  var backwingdrag = backwingsize*speed*speed*(((speed*speed)/(maxspeed*maxspeed))+cL_back);
+  var drag = 0.15*(frontwingdrag+backwingdrag);
+
+  var maxfrontwingdrag =frontwingsize*maxspeed*maxspeed*(((maxspeed*maxspeed)/(maxspeed*maxspeed))+cL_max);
+  var maxbackwingdrag = backwingsize*maxspeed*maxspeed*(((maxspeed*maxspeed)/(maxspeed*maxspeed))+cl_back_max);
+  var maxdrag = 0.15*(maxfrontwingdrag+maxbackwingdrag);
+
+  var minfrontwingdrag =frontwingsize*minspeed*minspeed*(((minspeed*minspeed)/(minspeed*minspeed))+cL_min);
+  var minbackwingdrag = backwingsize*minspeed*minspeed*(((minspeed*minspeed)/(minspeed*minspeed))+cl_back_min);
+  var mindrag = 0.15*(minfrontwingdrag+minbackwingdrag);
 
 
   var AoA_radians = AngleOfAttack*Math.PI/180;
@@ -127,12 +136,14 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   var back_y = front_y + fuselage_len*Math.sin(AoA_radians);
 
   // position of balance point
-  var bal_x = front_x - (fuselage_len*back_lift)/(front_lift-back_lift);
+  var bal_x = front_x - (fuselage_len*back_lift)/(front_lift+drag-back_lift);
   var bal_y = 140;
 
   // balance point limits
-  var fwd_limit = front_x - (fuselage_len*back_lift_min)/(front_lift_min-(back_lift_min));
-  var back_limit = front_x - (fuselage_len*(back_lift_max))/(front_lift_max-(back_lift_max));
+  var fwd_limit = front_x - (fuselage_len*back_lift_min)/(front_lift_min+mindrag-(back_lift_min));
+  var back_limit = front_x - (fuselage_len*(back_lift_max))/(front_lift_max+maxdrag-(back_lift_max));
+  var mid_point = (fwd_limit+back_limit)/2;
+  var mid_pt_cms = -mid_point - front_x+(68*2) + 60;
 
   // rotate and draw front wing:
   ctx.save();
@@ -210,7 +221,8 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
     ctx.lineTo(fwd_limit,155);
     ctx.moveTo(back_limit,160);
     ctx.lineTo(back_limit,155);
-    var mid_point = (fwd_limit+back_limit)/2;
+    ctx.font = "20px Arial";
+    ctx.fillText("Foil track: "+mid_pt_cms.toFixed(1) + " cms", 400, 300); 
     ctx.moveTo(mid_point,165);
     ctx.lineTo(mid_point,155);
     ctx.stroke();
