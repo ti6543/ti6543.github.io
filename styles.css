@@ -181,7 +181,7 @@ div.header {
   div.article {
     
   text-align: center;
-  background-color: rgb(13, 0, 77);
+  background-color: rgb(0, 0, 0);
   padding: 10px 20px;
   margin: 20px;
   }
@@ -194,7 +194,7 @@ div.header {
     color:aliceblue;
   }
 
-  div.article > a:link, a:visited {
+  a:link, a:visited {
     text-decoration: none;
   }
 
