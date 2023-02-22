@@ -32,7 +32,7 @@ img {
 
 div.header {
   position: fixed;
-  background-color: #3D99CE;
+  background-color: #8cd0f7;
   top:0px;
   left: 0px;
   padding-bottom: 5px;
@@ -104,10 +104,11 @@ div.header {
   }
 
   .activity {
-    background-color: rgba(254, 251, 246, 0.792);
+    background-color: rgba(247, 242, 233, 0.792);
     padding: 0px;
     padding-top: 100px;
     padding-left: 105px;
+    padding-bottom: 500px;
     margin-right: -7px;
     flex-shrink: 2;
   }
@@ -173,10 +174,28 @@ div.header {
 
   ul.nav a.hover {color: white;}
 
+  .articles {
+    display: flex;
+  }
 
   div.article {
-    background-color: #3D99CE;
-    width: 100px;
+    
+  text-align: center;
+  background-color: rgb(13, 0, 77);
+  padding: 10px 20px;
+  margin: 20px;
+  }
+
+  div.article > p {
+    color:aliceblue;
+  }
+
+  div.article > h4 {
+    color:aliceblue;
+  }
+
+  div.article > a:link, a:visited {
+    text-decoration: none;
   }
 
 
