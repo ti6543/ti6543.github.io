@@ -109,7 +109,7 @@ div.header {
     padding-top: 100px;
     padding-left: 105px;
     padding-bottom: 500px;
-    padding-right: 500px;
+    width: 100% ;
     margin-right: -7px;
     flex-shrink: 2;
   }
