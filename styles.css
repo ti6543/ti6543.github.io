@@ -105,13 +105,10 @@ div.header {
 
   .activity {
     background-color: rgba(247, 242, 233, 0.792);
-    padding: 0px;
-    padding-top: 100px;
-    padding-left: 105px;
-    padding-bottom: 500px;
+   
+    height: 100%;
     width: 100% ;
-    margin-right: -7px;
-    flex-shrink: 2;
+    
   }
 
   ul.nav {
