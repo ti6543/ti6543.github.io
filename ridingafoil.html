@@ -23,13 +23,6 @@
 
       <div class = "page">
 
-      
-
-      <script>
-        var currentURL = window.location.pathname.split("/").pop()
-        console.log(currentURL);
-        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
-      </script>
     
     <div class="activity">
 
@@ -47,6 +40,12 @@
         <li><a href="choosingafoil.html" style="display:block">Choosing a foil</a></li>
         </ul>
       </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
 
 
       <div class = 'page'>
@@ -117,7 +116,7 @@
     <p>Next page: <a href="foilsetup.html" style="display:block">Foil Setup</a></p>
       </div>
     </div>
-    
+
 </body>
 
 </html>
