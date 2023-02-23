@@ -54,6 +54,9 @@ div.header {
   .sidebar  {
     display: block;
   }
+  .activity {
+    padding-left: 100px;
+  }
 }
 
 .sidebar {
@@ -62,7 +65,6 @@ div.header {
   left:0px;
   background-color: #d3e0e8;
   width:  100px;
-  flex-shrink: 1;
   height:100%;
  margin-right: 4px;
  padding-left: 0px;
@@ -71,7 +73,7 @@ div.header {
  border-style: solid;
  border-color: black;
   border-width: 2px;
-  z-index: 0;
+ 
 }
 
 .sidebar > ul {
@@ -114,10 +116,9 @@ div.header {
   }
 
   .activity {
-    background-color: rgba(247, 242, 233, 0.792);
-   display: flex;
-    height: 100%;
-    width: 100% ;
+    position: relative;
+    padding-top: 100px;
+    
     
   }
 
