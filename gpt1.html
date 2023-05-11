@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Aerofoil Lift Coefficient Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>Aerofoil Lift Coefficient Graph</h1>
+    
+    <div>
+      <label for="aspect-ratio">Aspect Ratio:</label>
+      <input type="range" id="aspect-ratio" min="1" max="20" step="0.1" value="5">
+      <span id="aspect-ratio-value"></span>
+    </div>
+    
+    <div>
+      <label for="zerofoil-size">Zerofoil Size:</label>
+      <input type="range" id="zerofoil-size" min="0.1" max="1" step="0.01" value="0.5">
+      <span id="zerofoil-size-value"></span>
+    </div>
+    
+    <canvas id="myChart"></canvas>
+    
+    <script>
+      // Get the canvas element
+      const ctx = document.getElementById('myChart').getContext('2d');
+      
+      // Initialize the chart data
+      const data = {
+        labels: [],
+        datasets: [{
+          label: 'Lift Coefficient',
+          data: [],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      };
+      
+      // Initialize the chart options
+      const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Angle of Attack (degrees)'
+            }
+          }],
+          yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Lift Coefficient'
+            }
+          }]
+        }
+      };
+      
+      // Create the chart
+      const chart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+      });
+      
+      // Update the chart data and labels based on the current aspect ratio and zerofoil size
+      function updateChartData() {
+        const aspectRatio = parseFloat(document.getElementById('aspect-ratio').value);
+        const zerofoilSize = parseFloat(document.getElementById('zerofoil-size').value);
+        const alphaRange = 20;
+        const alphaStep = 0.5;
+        
+        // Calculate the lift coefficient data points
+        const liftCoefficients = [];
+        const alphas = [];
+        for (let alpha = -alphaRange; alpha <= alphaRange; alpha += alphaStep) {
+          const liftCoefficient = 2 * Math.PI * aspectRatio / (2 + Math.sqrt(4 + (aspectRatio * Math.sin(alpha * Math.PI / 180) / zerofoilSize) ** 2 * (1 + (Math.tan(alpha * Math.PI / 180) ** 2 / aspectRatio ** 2)))) * zerofoilSize;
+          liftCoefficients.push(liftCoefficient.toFixed(2));
+          alphas.push(alpha);
+        }
+        
+        // Update the chart data and labels
+        chart.data.datasets[0].data = liftCoefficients;
+        chart.data.labels = alphas;
+        chart.update();
+        
+        // Update the slider value labels
+        document.getElementById('

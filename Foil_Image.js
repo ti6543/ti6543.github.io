@@ -135,6 +135,9 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   var back_x = front_x + fuselage_len*Math.cos(AoA_radians);
   var back_y = front_y + fuselage_len*Math.sin(AoA_radians);
 
+  //Centre of pressure
+  
+
   // position of balance point
   var bal_x = front_x - (fuselage_len*back_lift)/(front_lift+drag-back_lift);
   var bal_y = 140;
