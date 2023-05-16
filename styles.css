@@ -32,7 +32,7 @@ img {
 
 div.header {
   position: fixed;
-  background-color: #d3e0e8;
+  background-color: rgb(245, 245, 245);
   top:0px;
   left: 0px;
   padding-bottom: 5px;
@@ -40,6 +40,10 @@ div.header {
   height: 60px;
   z-index: 1;
   
+}
+
+a.header {
+  float: right;
 }
 
 .page {
@@ -65,7 +69,8 @@ div.header {
   position: fixed;
   top: 97px;
   left:0px;
-  background-color: #d3e0e8;
+  background-color: #001748;
+  color: white;
   width:  100px;
   height:100%;
  margin-right: 4px;
@@ -75,12 +80,14 @@ div.header {
  border-style: solid;
  border-color: black;
   border-width: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
 }
 
 .sidebar > ul {
   list-style: none;
   display: inline-block;
+  color: white;
   padding: 5px;
   padding-top: 0px;
   margin: 0;
@@ -92,19 +99,21 @@ div.header {
  padding-bottom: 5px;
   text-decoration: none;
   display: block;
+  color: white;
 }
 
 .sidebar > ul >li  a:hover {
-  background-color: #d3e0e8;
+  background-color: #9ed0ef;
+  color: white;
 }
 
 .current-link {
   color:white;
-  background-color: #d3e0e8;
+  background-color: #296f98;
 }
 
   body {
-    background-color: rgb(254, 251, 246);
+    background-color:rgb(245, 245, 245);
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -112,9 +121,11 @@ div.header {
 
   h1 {
     color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   p {
     color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .activity {
@@ -130,20 +141,21 @@ div.header {
     left:0px;
     border-style: solid;
  border-color: black;
-  border-width: 2px;
+  border-width: 1px;
     height: 30px;
     width: 2000px;
     padding-left: 10px;
-    background-color: #000000;
+    background-color: #001748;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
-    z-index: 1;
+    z-index: 2;
   }
   ul.nav > li {
     display: inline-block;
     padding: 5px 10px;
   }
   ul.nav > li:hover {
-    background-color: #296f98;
+    background-color: #001748;
   }
 
   ul.nav > li {

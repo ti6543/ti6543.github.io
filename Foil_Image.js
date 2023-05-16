@@ -13,7 +13,7 @@ var frontwingsize = 35;
   var displayfrontfoilsize;
   var maxspeed;
   var minspeed;
-  var max_AoA = 12;
+  var max_AoA = 15;
 
 function init() {
     
@@ -117,36 +117,29 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   var back_lift_max = cl_back_max*backwingsize*maxspeed*maxspeed;
   var back_lift_min = cl_back_min*backwingsize*minspeed*minspeed;
 
-  var frontwingdrag =frontwingsize*speed*speed*(((speed*speed)/(maxspeed*maxspeed))+cL);
-  var backwingdrag = backwingsize*speed*speed*(((speed*speed)/(maxspeed*maxspeed))+cL_back);
-  var drag = 0.15*(frontwingdrag+backwingdrag);
+  
+  var drag = 0.07*cL*frontwingsize*speed*speed;
 
-  var maxfrontwingdrag =frontwingsize*maxspeed*maxspeed*(((maxspeed*maxspeed)/(maxspeed*maxspeed))+cL_max);
-  var maxbackwingdrag = backwingsize*maxspeed*maxspeed*(((maxspeed*maxspeed)/(maxspeed*maxspeed))+cl_back_max);
-  var maxdrag = 0.15*(maxfrontwingdrag+maxbackwingdrag);
-
-  var minfrontwingdrag =frontwingsize*minspeed*minspeed*(((minspeed*minspeed)/(minspeed*minspeed))+cL_min);
-  var minbackwingdrag = backwingsize*minspeed*minspeed*(((minspeed*minspeed)/(minspeed*minspeed))+cl_back_min);
-  var mindrag = 0.15*(minfrontwingdrag+minbackwingdrag);
-
+  //Centre of pressure
+  var delta_p = -40*cL;
 
   var AoA_radians = AngleOfAttack*Math.PI/180;
   // middle of stabiliser:
   var back_x = front_x + fuselage_len*Math.cos(AoA_radians);
   var back_y = front_y + fuselage_len*Math.sin(AoA_radians);
 
-  //Centre of pressure
   
-
+  
+  var height = 400;
   // position of balance point
-  var bal_x = front_x - (fuselage_len*back_lift)/(front_lift+drag-back_lift);
+  var bal_x = front_x - ((drag*height)-(back_lift*fuselage_len)+ (front_lift*delta_p))/(back_lift-front_lift);
   var bal_y = 140;
 
   // balance point limits
-  var fwd_limit = front_x - (fuselage_len*back_lift_min)/(front_lift_min+mindrag-(back_lift_min));
-  var back_limit = front_x - (fuselage_len*(back_lift_max))/(front_lift_max+maxdrag-(back_lift_max));
+  var fwd_limit = 150;
+  var back_limit = 100
   var mid_point = (fwd_limit+back_limit)/2;
-  var mid_pt_cms = -mid_point - front_x+(68*2) + 60;
+  var mid_pt_cms = (bal_x-front_x); //-mid_point - front_x+(68*2) + 60;
 
   // rotate and draw front wing:
   ctx.save();
