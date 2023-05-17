@@ -121,7 +121,9 @@ a.header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  
+  .gap {
+    padding: 20px;
+  }
 
 
   .activity {
