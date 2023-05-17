@@ -125,6 +125,9 @@ a.header {
     padding: 20px;
   }
 
+  .centre_image {
+    padding-left: 20px;
+  }
 
   .activity {
     position: relative;
