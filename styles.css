@@ -256,6 +256,18 @@ a.header {
       padding: 5px;
     }
 
+    .diagrams_float_left {
+      width: min-content;
+      text-align: center;
+      border-color:rgb(0, 0, 0);
+      border: 1px;
+      border-style: solid;
+      margin: 5px;
+      background-color: white;
+      padding: 5px;
+      float: left;
+    }
+
     .sections {
       border-color:rgb(0, 0, 0);
       border: 2px;
