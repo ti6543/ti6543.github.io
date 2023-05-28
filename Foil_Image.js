@@ -4,6 +4,7 @@ const man_top = new Image();
 const man_legs = new Image();
 const foil_pic = new Image();
 const board = new Image();
+const balancepointarrow = new Image();
 var speed = 14;
 var fuselage_len = 170;
 var frontwingsize = 38;
@@ -30,6 +31,7 @@ function init() {
     man_legs.src = 'man1.png';
     board.src = 'board_only.png';
     foil_pic.src = 'foil_only.png';
+    balancepointarrow.src = 'balance_pt.png'
     // start animation:
   window.requestAnimationFrame(draw);
 }
@@ -163,11 +165,7 @@ speed = Math.sqrt(req_lift/((cL*frontwingsize)-(cL_back*backwingsize)));
   // Balance point
 
   ctx.beginPath();
-  ctx.lineWidth = 1;
-  ctx.arc(bal_x, bal_y, 6, 0, 2 * Math.PI);
-  ctx.moveTo(bal_x+5,bal_y+5);
-  ctx.lineTo(bal_x-5,bal_y-5);
-  ctx.moveTo(bal_x-5,bal_y+5);
+  ctx.drawImage(balancepointarrow,bal_x-25,bal_y,39,50);
   ctx.lineTo(bal_x+5,bal_y-5);
   ctx.stroke();
 
