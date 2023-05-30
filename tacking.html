@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>Understanding Foiling</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body onclick >
+
+    
+      <div class="header">
+        <h1 id="title">Understanding Foiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+        <div class="sidebar">
+          <h3>Technique</h3>
+          <ul>
+            <li><a href="foiling.html" >Getting foiling</a></li>
+          <li><a href="gybing.html" >Gybing</a></li>
+          <li><a href="tacking.html" style="display:block">Tacking</a></li>
+          
+          </ul>
+        </div>
+  
+        <script>
+          var currentURL = window.location.pathname.split("/").pop()
+          console.log(currentURL);
+          document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+        </script>
+
+      <div class = 'activity'>
+
+        <h2>Tacking</h2>
+
+        <div class="prequesite" >
+            <p><b>Prerequisite</b> - comfortable sailing switch-stance</p>
+            </div>
+
+        <div class = "diagrams">
+            <img src="Tack_wrong.jpg" height="300px" width = "300px"/>
+         </div>
+
+         <div class = "diagrams">
+            <img src="Tack_right.jpg" height="300px" width = "300px"/>
+         </div>
+
+
+      </div>
+
+    
+    
+</body>
+
+</html>
