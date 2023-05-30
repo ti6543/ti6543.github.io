@@ -256,6 +256,17 @@ a.header {
       padding: 5px;
     }
 
+    .prequesite {
+      width: 400px;
+      text-align: center;
+      border-color:rgb(0, 0, 0);
+      border: 1px;
+      border-style: solid;
+      margin: 5px;
+      background-color: rgb(215, 214, 214);
+      padding: 5px;
+    }
+
     .diagrams_float_left {
       width: min-content;
       text-align: center;
