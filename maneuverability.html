@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>Understanding Foiling</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body onclick>
+
+    
+      <div class="header">
+        <h1 id="title">Understanding Foiling</h1>
+        <img src="figure_wing.png" height="60px" width = "60px"/>
+        
+      </div>
+    
+    
+      <script src="nav.js"></script>
+
+      <div class = "page">
+
+      <div class="sidebar">
+        <h3>Knowledge</h3>
+        <ul>
+            <li><a href="whatisahyrdofoil.html" >What is a hydrofoil?</a></li>
+            <li><a href="frontwingsandstabs.html" >Front wings and stabilisers</a></li>
+            <li><a href="ridingafoil.html" style="display:block">How a foil is controlled</a></li>
+            <li><a href="foilsetup.html" style="display:block">Foil Setup</a></li>
+            <li><a href="foilsetupadvanced.html" style="display:block">Foil Setup (Advanced)</a></li>
+            <li><a href="foil_animation.html" style="display:block">Foil balance simulator</a></li>
+            <li><a href="maneuverability.html" style="display:block">Maneuverability</a></li>
+            <li><a href="drag.html" style="display:block">Drag</a></li>
+            <li><a href="foilshapessizes.html" style="display:block">Foil shapes & sizes</a></li>
+            <li><a href="choosingafoil.html" style="display:block">Choosing a foil</a></li>
+        </ul>
+      </div>
+
+      <script>
+        var currentURL = window.location.pathname.split("/").pop()
+        console.log(currentURL);
+        document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+      </script>
+    
+
+      <div class = 'activity'>
+        <h2>Maneuverability</h2>
+
+        <p>So far we've been only been looking at pitch. However there are two more axes on which a foil can rotate - roll and yaw. Generally when turning the board, this will involve some yaw and roll.</p>
+
+        <h3>Roll and Yaw</h4>
+
+          <div class = "diagrams">
+            <img src = "Roll_yaw.jpg" width="200px" height="200px" />
+          </div>
+
+          <h3>Front Foil properties:</h3>
+
+          <h4>Wingspan</h4>
+
+          <p>Foils with larger wingspans are harder to roll. This is one of the downsides of larger High Aspect Foils.</p>
+
+          <h4>Anhedral</h4>
+
+            <p>Anhedral is the down turning of the two wings on the foil:</p>
+
+          <div class = "diagrams">
+            <img src = "Anhedral.jpg" width="300px" height="100px" />
+          </div>
+
+          <p>Anhedral will reduce roll stability, increasing roll maneuverability. </p>
+          <p>Beginners will want more stable foils in roll. They'll be naturally using bigger foils that are more stable. Foils that are very wide are actually more difficult to handle than medium wingspan beginner foils</p>
+            <p>More advanced foilers will desire a turn-ier foil, especially for waves.</p>
+        
+          <h4>Winglets</h4>
+
+          <p>Some front foils have up or downturned tips. These have two effects:</p>
+          <ul>
+            <li>Reduce maneuverability</li>
+            <li>Reduce Induced drag (reduces the vortices)</li>
+          </ul>
+
+          <p>They have gone out of favour, as they have a disadvantage of throwing the rider off if the wingtips breach.</p>
+
+          <h3>Stabiliser properties:</h3>
+
+<p>The type of stabiliser used will also effect the maneuverability of the setup. The following properties will have an effect:</p>
+
+        <h4>Upturned tips</h4>
+
+        <div class="sections1">
+          <div class = "diagrams">
+            <img src = "upturned_wingtips.jpg" width="300px" height="100px" />
+          </div>
+        </div>
+
+        <p>Some stabilisers are flat, and some have upturned tips</p>
+
+        <p>These upturned tips resist yaw, making the setup more directional.</p>
+
+        <h4>Dihedral</h4>
+        
+        <p>Dihedral is the angle the two wings of the stabiliser make to each other.</p>
+
+        <div class="sections1">
+          <div class = "diagrams">
+            <img src = "Dihedral.jpg" width="300px" height="100px" />
+          </div>
+        </div>
+
+        <p>Dihedral reduces the maneuverability of the setup by increasing the roll stability - if you try to roll it will provide some resistance.</p>
+        
+        <h4>Fuselage length</h4>
+
+        <p>By reducing fuselage length, maneuverability is increased in yaw. This is because it reduces the leverage required to yaw the foil. </p>
+        
+        <p>Next page: <a href="drag.html" style="display:block">Drag</a></p>
+
+    </div>
+    
+</body>
+
+</html>
