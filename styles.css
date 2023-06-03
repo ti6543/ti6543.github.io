@@ -266,7 +266,7 @@ a.header {
 
     .summary {
       width: fit-content;
-      max-width: 500px;
+      max-width: 600px;
       text-align: left;
       border-color:rgb(0, 0, 0);
       border: 3px;
