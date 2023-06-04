@@ -36,6 +36,12 @@ var navbar = ` <nav>
   </div>
   </li>
 
+  <li class="list1">About
+    <div class="nav1">
+      
+  </div>
+  </li>
+
 </ul>
 </nav>`;
 
