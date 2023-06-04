@@ -42,8 +42,9 @@ div.header {
   
 }
 
-a.header {
-  float: right;
+.header > img{
+  float: left;
+  margin: 3px;
 }
 
 .page {
