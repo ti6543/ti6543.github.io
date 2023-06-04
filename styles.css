@@ -251,6 +251,7 @@ a.header {
 
     .diagrams {
       width: min-content;
+      height: min-content;
       text-align: center;
       border-color:rgb(0, 0, 0);
       border: 1px;
