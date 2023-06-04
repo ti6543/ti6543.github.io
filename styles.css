@@ -154,7 +154,7 @@ div.header {
     -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
- 
+ overflow: visible;
     height: 30px;
     width: 2500px;
     padding-left: 10px;
