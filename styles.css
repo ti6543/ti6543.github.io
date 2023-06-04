@@ -156,7 +156,7 @@ div.header {
   user-select: none; /* Standard syntax */
  
     height: 30px;
-    width: max-content;
+    width: 2500px;
     padding-left: 10px;
     background-color: #001748;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
