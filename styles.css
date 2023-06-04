@@ -134,8 +134,8 @@ a.header {
   .activity {
     position: relative;
     padding-top: 100px;
-   
-    
+   padding-right: 0px;
+    margin-right: 0px;
   }
 
   ul.nav {
