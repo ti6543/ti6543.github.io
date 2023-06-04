@@ -62,7 +62,7 @@ a.header {
   }
   .activity {
     padding-left: 100px;
-    width: 100%;
+    
   }
   
 }
@@ -134,7 +134,7 @@ a.header {
   .activity {
     position: relative;
     padding-top: 100px;
-    
+    width: 100%;
     
   }
 
