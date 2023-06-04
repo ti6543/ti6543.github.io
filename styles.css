@@ -153,6 +153,8 @@ div.header {
     height: 30px;
     width: 2000px;
     overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     padding-left: 10px;
     background-color: #001748;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
