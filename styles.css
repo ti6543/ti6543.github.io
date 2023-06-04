@@ -56,13 +56,22 @@ a.header {
   z-index: 1;
 }
 
+.activity {
+  position: relative;
+  padding-top: 100px;
+ padding-right: 0px;
+  margin-right: 0px;
+  padding-left: 3px;
+}
+
 @media screen and (min-width: 701px) {
   .sidebar  {
     display: block;
   }
   .activity {
-    padding-left: 100px;
+    padding-left: 103px;
     padding-right: 0px;
+    
   }
   
 }
@@ -131,12 +140,7 @@ a.header {
     padding-left: 20px;
   }
 
-  .activity {
-    position: relative;
-    padding-top: 100px;
-   padding-right: 0px;
-    margin-right: 0px;
-  }
+  
 
   ul.nav {
     position: fixed;
