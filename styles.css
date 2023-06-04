@@ -72,7 +72,10 @@ div.header {
   .activity {
     padding-left: 103px;
     padding-right: 0px;
-    
+  }
+
+  ul.nav {
+    overflow-x: scroll;
   }
   
 }
@@ -152,7 +155,7 @@ div.header {
     border-width: 1px;
     height: 30px;
     width: 2000px;
-    overflow-x: auto;
+    
     overflow-y: hidden;
     white-space: nowrap;
     padding-left: 10px;
