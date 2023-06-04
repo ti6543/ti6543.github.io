@@ -267,7 +267,7 @@ div.header {
     }
 
     .prequesite {
-      width: 400px;
+      width: 380px;
       text-align: center;
       border-color:rgb(0, 0, 0);
       box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.5);
@@ -295,7 +295,7 @@ div.header {
     }
 
     .conditions {
-      width: 400px;
+      width: 380px;
       text-align: center;
       border-color:rgb(0, 0, 0);
       border: 1px;
