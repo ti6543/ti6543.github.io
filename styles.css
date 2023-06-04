@@ -151,16 +151,21 @@ div.header {
     border-style: solid;
     border-color: black;
     border-width: 1px;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+ 
     height: 30px;
-    width: 2000px;
-    
-    
+    width: max-content;
     padding-left: 10px;
     background-color: #001748;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
     z-index: 2;
   }
+
+ 
+
   ul.nav > li {
     display: inline-block;
     padding: 5px 10px;
