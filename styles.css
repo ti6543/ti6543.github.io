@@ -164,6 +164,7 @@ img {
     display: flex;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+    z-index: 3;
 }
 
   .test {
