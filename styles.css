@@ -148,13 +148,14 @@ img {
     padding: 0 10px;
     max-width: 800px;
     height:60px;
-    
+    z-index: 5;
 }
 
 .navBar {
     background: #455A64;
     position: fixed;
     top:60px;
+    z-index: 5;
 }
 
 .nav {
@@ -164,7 +165,7 @@ img {
     display: flex;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    z-index: 3;
+    z-index: 5;
 }
 
   .test {
@@ -177,19 +178,23 @@ img {
   .nav > li {
     display: inline-block;
     padding: 5px 10px;
+    z-index: 5;
   }
   .nav > li:hover {
     background-color: #001748;
+    z-index: 5;
   }
 
   .nav > li {
     color: white;
     text-decoration: none;
+    z-index: 5;
   }
 
   .nav > li > a {
     color: white;
     text-decoration: none;
+    z-index: 5;
   }
   
   .nav1 {
@@ -197,7 +202,7 @@ img {
   position:absolute;
   background-color: #d3e0e8;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 3;
+  z-index: 5;
   margin-top: 5px;
   margin-left: -10px;
   padding-right: 0px;
@@ -210,11 +215,12 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    z-index: 5;
 }
 
-  li.list1:hover .nav1 {display: block;}
+  li.list1:hover .nav1 {display: block;z-index: 5;}
 
-  .nav a:hover {color: rgb(122, 122, 122);}
+  .nav a:hover {color: rgb(122, 122, 122);z-index: 5;}
 
   .articles {
     display: flex;
