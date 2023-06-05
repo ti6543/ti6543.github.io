@@ -14,8 +14,6 @@
   height: 25px;
 }
 
-
-
 .foiljava { 
   display: flex;
   align-items: center;
@@ -63,7 +61,10 @@ img {
  padding-right: 0px;
   margin-right: 0px;
   padding-left: 3px;
+  
 }
+
+
 
 @media screen and (min-width: 701px) {
   .sidebar  {
@@ -206,7 +207,8 @@ img {
   margin-top: 5px;
   margin-left: -10px;
   padding-right: 0px;
-  
+  opacity: 0.99;
+   z-index: 999;
   }
   .nav > li > a {
     padding: 14px 16px;
