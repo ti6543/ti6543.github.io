@@ -153,6 +153,7 @@ img {
     background: #455A64;
     position: fixed;
     height:60px;
+    
     top:0px;
     left:60px;
     white-space: nowrap;
@@ -162,9 +163,10 @@ img {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 10 10 10 10;
   padding: 0 10px;
-  max-width: 800px;
+  
+  width: 2000px;
   z-index: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -226,10 +228,14 @@ img {
 
   li.list1:hover .nav1 {display: block;z-index: 5;}
 
-  .nav1 > a, a:hover, a:active, a:visited { color: black; }
+  .nav1 > a, a:active, a:visited { color: black; padding: 5px; }
   
+  .nav1 {
+padding: 5px;
+  }
 
-  .nav a:hover {color: rgb(122, 122, 122);z-index: 5;}
+
+  .nav1 a:hover {color: rgb(255, 250, 250);z-index: 5;}
 
   .articles {
     display: flex;
