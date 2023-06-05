@@ -3,11 +3,12 @@ var navbar = `
 <nav class="navBar">
     <div class="container">
         <ul class="nav">
-        <li class="list1">Home
-                  <div class="nav1">
-                  <a href="index.html" style="display:block">Home</a>
-                </div>
+        <li>
+                  
+                  <a href="index.html" >Home</a>
+                
                 </li>
+
             <li class="list1">Foil Knowledge</a>
                 <div class="nav1">
                   <a href="whatisahyrdofoil.html" style="display:block">What is a hydrofoil?</a>
