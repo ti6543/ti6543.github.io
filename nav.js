@@ -66,7 +66,7 @@ var navbar_knowledge = `
                     <a href="choosingafoil.html" style="display:block">Choosing a foil</a>
                   </div>
                </li>
-               <li class="list1" >Menu
+               <li class="list1" ><img src="menu_icon.png" height="40px" width = "40px"/>
                 <div class="nav1">
                     <a href="foiling.html" style="display:block">Techniques</a>
                     <a href="SouthEastWeather.html" style="display:block">Weather</a>
@@ -85,7 +85,7 @@ let width = window.innerWidth;
 
 let address = window.location.href.split("/").pop();
 
-const knowledge = ["whatisahyrdofoil.html", "frontwingsandstabs.html", "ridingafoil.html"];
+const knowledge = ["whatisahyrdofoil.html", "frontwingsandstabs.html", "ridingafoil.html", "foilsetup.html", "foilsetupadvanced.html", "foil_animation.html", "maneuverability.html", "drag.html", "foilshapesandsizes.html", "choosingafoil.html"];
 let know = new Boolean(false);
 
 
@@ -96,7 +96,7 @@ for (let i = 0; i < knowledge.length; i++) {
 
 
 
-if (know == true && width<400) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
+if (know == true && width<500) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
 else {document.body.insertAdjacentHTML("beforeend", navbar);};
 
 console.log(width);
