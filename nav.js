@@ -4,7 +4,7 @@ var navbar = `
     <div class="container">
         <ul class="nav">
           <li>
-            <a href="index.html" > <img src="figure_wing.png" height="60px" width = "60px"/></a>
+            <a href="index.html" > <img class = "pic"  src="figure_wing.png" height="60px" width = "60px"/></a>
           </li>
 
             <li class="list1">Foil Knowledge
