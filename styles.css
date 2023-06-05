@@ -52,7 +52,7 @@ img {
 
 .sidebar  {
   display: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .activity {
@@ -210,7 +210,7 @@ img {
   margin-top: 5px;
   margin-left: -10px;
   padding-right: 0px;
-  
+  color:wh
    z-index: 999;
   }
 
@@ -226,6 +226,7 @@ img {
 
   li.list1:hover .nav1 {display: block;z-index: 5;}
 
+  .nav1 > a, a:hover, a:active, a:visited { color: black; }
   
 
   .nav a:hover {color: rgb(122, 122, 122);z-index: 5;}
