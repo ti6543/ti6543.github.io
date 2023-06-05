@@ -81,7 +81,7 @@ img {
 
 .sidebar {
   position: fixed;
-  top: 57px;
+  top: 61px;
   left:0px;
   background-color: #455A64;
   color: white;
@@ -93,7 +93,7 @@ img {
  font-size: 16px;
  border-style: solid;
  border-color: black;
-  border-width: 2px;
+  border-width: 1px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
 }
@@ -231,8 +231,8 @@ img {
   .nav1 > a, a:active, a:visited { color: black; padding: 5px; }
   
   .nav1 {
-padding: 5px;
-  }
+      padding: 5px;
+        }
 
 
   .nav1 a:hover {color: rgb(255, 250, 250);z-index: 5;}
