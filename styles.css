@@ -82,7 +82,7 @@ div.header {
   position: fixed;
   top: 97px;
   left:0px;
-  background-color: #001748;
+  background-color: #455A64;
   color: white;
   width:  110px;
   height:100%;
@@ -142,50 +142,51 @@ div.header {
     padding-left: 20px;
   }
 
-  .nav {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-    overflow-x: scroll;
-    overflow-y:hidden
-        
 
-  }
-
-  ul.nav {
-    position: fixed;
-    top: 49px;
-    left:0px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+  .container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 800px;
+    height:40px;
     
-    min-height: 70px;
-    width: 800px;
-    padding-left: 10px;
-    background-color: #001748;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: left;
-    z-index: 2;
-  }
+}
 
-  
+.navBar {
+    background: #455A64;
+    position: fixed;
+    top:60px;
+}
+
+.nav {
+    margin: 0 -10px;
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+  .test {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+  }
  
 
-  ul.nav > li {
+  .nav > li {
     display: inline-block;
     padding: 5px 10px;
   }
-  ul.nav > li:hover {
+  .nav > li:hover {
     background-color: #001748;
   }
 
-  ul.nav > li {
+  .nav > li {
     color: white;
     text-decoration: none;
   }
 
-  ul.nav > li > a {
+  .nav > li > a {
     color: white;
     text-decoration: none;
   }
@@ -201,23 +202,18 @@ div.header {
   padding-right: 0px;
   
   }
-  .nav1 > a {
-    color: black;
-    padding-left: 5px;
-    padding-right: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  .nav > li > a {
+    padding: 14px 16px;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    
-  }
-  .nav1 > a:hover {
-    background-color:#d3e0e8;
-    color: white;
-  }
+    text-transform: uppercase;
+    font-size: 14px;
+}
 
   li.list1:hover .nav1 {display: block;}
 
-  ul.nav a:hover {color: rgb(122, 122, 122);}
+  .nav a:hover {color: rgb(122, 122, 122);}
 
   .articles {
     display: flex;
