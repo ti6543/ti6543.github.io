@@ -3,13 +3,11 @@ var navbar = `
 <nav class="navBar">
     <div class="container">
         <ul class="nav">
-        <li>
-                  
-                  <a href="index.html" >Home</a>
-                
-                </li>
+          <li>
+            <a href="index.html" > <img src="figure_wing.png" height="60px" width = "60px"/></a>
+          </li>
 
-            <li class="list1">Foil Knowledge</a>
+            <li class="list1">Foil Knowledge
                 <div class="nav1">
                   <a href="whatisahyrdofoil.html" style="display:block">What is a hydrofoil?</a>
                   <a href="frontwingsandstabs.html" style="display:block">Front wings and stabilisers</a>
@@ -23,7 +21,7 @@ var navbar = `
                     <a href="choosingafoil.html" style="display:block">Choosing a foil</a>
                   </div>
                </li>
-               <li class="list1" >Wingfoil technique</a>
+               <li class="list1" >Wingfoil technique
                 <div class="nav1">
                     <a href="foiling.html" style="display:block">Getting Foiling</a>
                     <a href="gybing.html" style="display:block">Gybing</a>

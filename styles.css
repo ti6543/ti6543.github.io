@@ -144,19 +144,19 @@ img {
   }
 
 
-  .container {
-    margin: 0 auto;
-    padding: 0 10px;
-    max-width: 800px;
-    height:60px;
-    z-index: 5;
-}
-
 .navBar {
     background: #455A64;
     position: fixed;
-    top:60px;
+    top:0px;
     z-index: 5;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 800px;
+  height:40px;
+  z-index: 5;
 }
 
 .nav {
@@ -167,6 +167,12 @@ img {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     z-index: 5;
+}
+
+.nav > a {
+  margin: 0px;
+  padding: 0px;
+
 }
 
   .test {
