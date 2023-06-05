@@ -57,7 +57,7 @@ img {
 
 .activity {
   position: relative;
-  padding-top: 100px;
+  padding-top: 50px;
  padding-right: 0px;
   margin-right: 0px;
   padding-left: 3px;
@@ -71,7 +71,7 @@ img {
     display: block;
   }
   .activity {
-    padding-left: 103px;
+    padding-left: 109px;
     padding-right: 0px;
   }
 
@@ -81,7 +81,7 @@ img {
 
 .sidebar {
   position: fixed;
-  top: 97px;
+  top: 57px;
   left:0px;
   background-color: #455A64;
   color: white;
@@ -143,13 +143,20 @@ img {
     padding-left: 20px;
   }
 
+  .pic {
+    position: fixed;
+    top:0px;
+    left:0px;
+  }
 
 .navBar {
     background: #455A64;
     position: fixed;
     height:60px;
     top:0px;
-    overflow: inherit;
+    left:60px;
+    white-space: nowrap;
+    
     -webkit-overflow-scrolling: touch;
     transform: translate3d(0, 0, 0);
 }
@@ -186,9 +193,7 @@ img {
     z-index: 5;
   }
 
-  .pic {
-    padding: 0px;
-  }
+  
 
   .nav > li > a {
     color: white;
@@ -205,7 +210,7 @@ img {
   margin-top: 5px;
   margin-left: -10px;
   padding-right: 0px;
-  opacity: 0.99;
+  
    z-index: 999;
   }
 
@@ -220,6 +225,8 @@ img {
 }
 
   li.list1:hover .nav1 {display: block;z-index: 5;}
+
+  
 
   .nav a:hover {color: rgb(122, 122, 122);z-index: 5;}
 

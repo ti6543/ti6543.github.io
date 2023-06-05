@@ -1,11 +1,9 @@
 var navbar = ` 
-
+<a class = "pic"  href="index.html" > <img src="figure_wing.png" height="60px" width = "60px"/></a>
 <nav class="navBar">
     <div class="container">
         <ul class="nav">
-          <li>
-            <a href="index.html" > <img class = "pic"  src="figure_wing.png" height="60px" width = "60px"/></a>
-          </li>
+          
 
             <li class="list1">Foil Knowledge
                 <div class="nav1">
@@ -35,15 +33,7 @@ var navbar = `
                 </div>
                 </li>
               
-                <li class="list1">Lessons
-                  <div class="nav1">
-                    
-                </div>
-
-                <li class="list1">Reviews
-                  <div class="nav1">
-                    
-                </div>
+                
               
                 <li class="list1">About
                   <div class="nav1">
