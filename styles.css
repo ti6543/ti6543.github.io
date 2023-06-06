@@ -297,6 +297,22 @@ img {
       flex-direction: row;
     }
 
+    .diagrams_centre {
+      
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+  }
+  
+  .diagrams_centre > img {
+    border-color:rgb(0, 0, 0);
+    border: 1px;
+    border-style: solid;
+  }
+  
+
     .diagrams {
       width: min-content;
       height: min-content;
