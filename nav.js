@@ -96,7 +96,7 @@ for (let i = 0; i < knowledge.length; i++) {
 
 
 
-if (know == true && width<500) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
+if (know == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
 else {document.body.insertAdjacentHTML("beforeend", navbar);};
 
 console.log(width);

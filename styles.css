@@ -226,6 +226,10 @@ img {
     z-index: 5;
 }
 
+.nav > li  {padding-top: 20px;}
+
+.nav > li > img {margin-top: -10px;}
+
   li.list1:hover .nav1 {display: block;z-index: 5;}
 
   .nav1 > a, a:active, a:visited { color: black; padding: 5px; }
