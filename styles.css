@@ -212,8 +212,6 @@ img {
   margin-top: 5px;
   margin-left: -10px;
   padding-right: 0px;
-  color:wh
-   z-index: 999;
   }
 
   .nav > li > a {
@@ -228,7 +226,19 @@ img {
 
 .nav > li  {padding-top: 20px;}
 
-.nav > li > img {margin-top: -10px;}
+.menu {
+      position: fixed;
+      top: 10px; 
+      right: 50px;
+      z-index: 4;
+      list-style: none;
+      height:60px;
+    }
+
+    
+
+  .menu:hover .nav1 {display: block;z-index: 5;}
+
 
   li.list1:hover .nav1 {display: block;z-index: 5;}
 
