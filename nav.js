@@ -76,6 +76,7 @@ var navbar_knowledge = `
                <div class="nav1">
                 <a href="foiling.html" style="display:block">Wingfoil technique</a>
                 <a href="SouthEastWeather.html" style="display:block">Weather</a>
+                <a href="about.html" style="display:block">About</a>
               </div>
               </div>
            
@@ -99,39 +100,37 @@ var navbar_technique = `
             <a href="tacking.html" style="display:block">Tacking</a>
         </div>
       </li>
-               <li class="list1" ><img src="menu_icon.png" height="40px" width = "40px"/>
-                <div class="nav1">
-                    <a href="whatisahyrdofoil.html" style="display:block">Foil Knowledge</a>
-                    <a href="SouthEastWeather.html" style="display:block">Weather</a>
-                </div>
-              </li>
+      </ul>
+      </div>
+  </nav>
+
+     <div class = "menu">
+      <img src="menu_icon.png" height="40px" width = "40px"/>
+      <div class="nav1">
+      <a href="whatisahyrdofoil.html" style="display:block">Foil Knowledge</a>
+       <a href="SouthEastWeather.html" style="display:block">Weather</a>
+       <a href="about.html" style="display:block">About</a>
+     </div>
+     </div>
               
-                
-        </ul>
-    </div>
-</nav>
+    
 `;
 
 var navbar_index = ` 
-<a class = "pic"  href="index.html" > <img src="figure_wing.png" height="60px" width = "60px"/></a>
 <nav class="navBar">
     <div class="container">
-        <ul class="nav">
-          
-
-        
-               <li class="list1" ><img src="menu_icon.png" height="40px" width = "40px"/>
-                <div class="nav1">
-                    <a href="whatisahyrdofoil.html" style="display:block">Foil Knowledge</a>
-                    <a href="foiling.html" style="display:block">Wingfoil technique</a>
-                    <a href="SouthEastWeather.html" style="display:block">Weather</a>
-                </div>
-              </li>
-              
-                
-        </ul>
     </div>
-</nav>
+    </nav>
+<a class = "pic"  href="index.html" > <img src="figure_wing.png" height="60px" width = "60px"/></a>
+<div class = "menu">
+      <img src="menu_icon.png" height="40px" width = "40px"/>
+      <div class="nav1">
+      <a href="whatisahyrdofoil.html" style="display:block">Foil Knowledge</a>
+      <a href="foiling.html" style="display:block">Wingfoil technique</a>
+       <a href="SouthEastWeather.html" style="display:block">Weather</a>
+       <a href="about.html" style="display:block">About</a>
+     </div>
+     </div>
 `;
 
 
@@ -160,6 +159,7 @@ for (let i = 0; i < technique.length; i++) {
 if (know == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
 else if (tech == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_technique);}
 else if (address == "index.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
+else if (address == "about.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
 else {document.body.insertAdjacentHTML("beforeend", navbar);};
 
 }
