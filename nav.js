@@ -164,6 +164,7 @@ for (let i = 0; i < technique.length; i++) {
 if (know == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
 else if (tech == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_technique);}
 else if (address == "index.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
+else if (address == "" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
 else if (address == "SouthEastWeather.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
 else if (address == "about.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
 else {document.body.insertAdjacentHTML("beforeend", navbar);};
