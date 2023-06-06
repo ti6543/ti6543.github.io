@@ -135,7 +135,20 @@ img {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
+  img {
+    transition:transform 0.25s ease;
+}
+
+img:active {
+    -webkit-transform:scale(1.5); /* or some other value */
+    transform:scale(1.5);
+}
+
   .gap {
+    padding: 20px;
+  }
+
+  .smallgap {
     padding: 20px;
   }
 
