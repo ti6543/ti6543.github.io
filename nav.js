@@ -74,6 +74,7 @@ var navbar_knowledge = `
               <div class = "menu">
                <img src="menu_icon.png" height="40px" width = "40px"/>
                <div class="nav1">
+               <a href="index.html" style="display:block">Home</a>
                 <a href="foiling.html" style="display:block">Wingfoil technique</a>
                 <a href="SouthEastWeather.html" style="display:block">Weather</a>
                 <a href="about.html" style="display:block">About</a>
@@ -107,6 +108,7 @@ var navbar_technique = `
      <div class = "menu">
       <img src="menu_icon.png" height="40px" width = "40px"/>
       <div class="nav1">
+      <a href="index.html" style="display:block">Home</a>
       <a href="whatisahyrdofoil.html" style="display:block">Foil Knowledge</a>
        <a href="SouthEastWeather.html" style="display:block">Weather</a>
        <a href="about.html" style="display:block">About</a>
@@ -125,6 +127,7 @@ var navbar_index = `
 <div class = "menu">
       <img src="menu_icon.png" height="40px" width = "40px"/>
       <div class="nav1">
+      <a href="index.html" style="display:block">Home</a>
       <a href="whatisahyrdofoil.html" style="display:block">Foil Knowledge</a>
       <a href="foiling.html" style="display:block">Wingfoil technique</a>
        <a href="SouthEastWeather.html" style="display:block">Weather</a>
@@ -133,7 +136,9 @@ var navbar_index = `
      </div>
 `;
 
-
+var currentURL = window.location.pathname.split("/").pop()
+    console.log(currentURL);
+    document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
 
 let width = window.innerWidth;
 
@@ -159,6 +164,7 @@ for (let i = 0; i < technique.length; i++) {
 if (know == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_knowledge);}
 else if (tech == true && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_technique);}
 else if (address == "index.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
+else if (address == "SouthEastWeather.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
 else if (address == "about.html" && width<700) {document.body.insertAdjacentHTML("beforeend", navbar_index);}
 else {document.body.insertAdjacentHTML("beforeend", navbar);};
 
