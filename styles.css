@@ -324,6 +324,17 @@ img:active {
     border: 1px;
     border-style: solid;
   }
+
+  .diagrams_centre_noborder {
+      
+      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
   
 
     .diagrams {
@@ -422,5 +433,5 @@ img:active {
     }
   
     .listmargin {
-      margin: 10px;
+      margin: 8px;
     }
