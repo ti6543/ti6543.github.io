@@ -294,6 +294,7 @@ img:active {
   background-color: rgb(255, 255, 255);
   padding: 1px 2px;
   margin: 20px;
+  opacity: 0.8;
   }
 
   div.article > p {
@@ -480,7 +481,7 @@ img:active {
 
   /* Center the video */
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
 
