@@ -295,6 +295,11 @@ img:active {
     text-decoration: none;
   }
 
+  a.bottomlink {
+    color: #455A64;
+    font-weight: bold;
+  }
+
 
   div.footer {
     width:100%;
