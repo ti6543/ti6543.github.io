@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  <head>
+    <title>The Wing Site</title>
+    <link rel="icon" type="image/x-icon" href="figure_wing.png">
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+<body onclick >
+
+    
+   
+  <div class="activity">
+
+    <script src="nav.js"></script>
+
+        <div class="sidebar">
+          <h3>Technique</h3>
+          <ul>
+            <li><a href="foiling.html" >Getting foiling</a></li>
+          <li><a href="gybing.html" >Gybing</a></li>
+          <li><a href="tacking.html" style="display:block">Tacking</a></li>
+          <li><a href="waveriding.html" style="display:block">Wave Riding</a></li>
+          
+          </ul>
+        </div>
+  
+        <script>
+          var currentURL = window.location.pathname.split("/").pop()
+          console.log(currentURL);
+          document.querySelectorAll('a[href="'+currentURL+'"]').forEach(function(elem){elem.className += ' current-link'});
+        </script>
+
+     
+
+        <h2>Wave riding</h2>
+
+        <div class="prequesite" >
+        <p><b>Prerequisite</b> - once comfortable gliding downwind with no power</p>
+        </div>
+
+        <div class = "conditions">
+          <p><b>Conditions</b> - Knee to Waist high swell and Wind - gusts of 14kts to 30kts</p>
+        </div>
+
+        <p>The most fun you can have when wingfoiling is in swell and waves</p>
+
+        <h3>Apparent Wind</h3>
+
+        <div class="sections1">
+            <div class = "diagrams">
+              <img src = "Apparent_wind_dw.jpg" width="200px" height="250px" />
+            </div>
+
+            
+          </div>
+        
+          
+
+          <h2><span style="color: #0073ff"><b>How to ride</b></span></h2>
+
+         
+
+
+          <div class = "summary">
+            <h2>Summary</h2>
+            <ul>
+              <li>Wave riding</li>
+                
+              
+            </ul>
+          </div>
+
+
+
+      </div>
+
+      <div class="footer">
+
+        <a style="float: right; padding-top: 5px; padding-right: 5px;" target="_blank" href="https://www.instagram.com/tim.sabey/">
+          <img height="40px" width = "40px" src="instagram_icon.png">
+         </a>
+      </div>
+    
+</body>
+
+</html>

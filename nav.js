@@ -26,6 +26,7 @@ var navbar = `
                     <a href="foiling.html" style="display:block">Getting Foiling</a>
                     <a href="gybing.html" style="display:block">Gybing</a>
                     <a href="tacking.html" style="display:block">Tacking</a>
+                    <a href="waveriding.html" style="display:block">Wave Riding</a>
                 </div>
               </li>
               
@@ -99,6 +100,7 @@ var navbar_technique = `
             <a href="foiling.html" style="display:block">Getting Foiling</a>
             <a href="gybing.html" style="display:block">Gybing</a>
             <a href="tacking.html" style="display:block">Tacking</a>
+            <a href="waveriding.html" style="display:block">Wave Riding</a>
         </div>
       </li>
       </ul>
@@ -147,7 +149,7 @@ let address = window.location.href.split("/").pop();
 const knowledge = ["whatisahyrdofoil.html", "frontwingsandstabs.html", "ridingafoil.html", "foilsetup.html", "foilsetupadvanced.html", "foil_animation.html", "maneuverability.html", "drag.html", "foilshapesandsizes.html", "choosingafoil.html"];
 let know = new Boolean(false);
 
-const technique = ["foiling.html", "gybing.html", "tacking.html"];
+const technique = ["foiling.html", "gybing.html", "tacking.html", "waveriding.html"];
 let tech = new Boolean(false);
 
 for (let i = 0; i < knowledge.length; i++) {
