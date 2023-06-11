@@ -386,6 +386,18 @@ img:active {
       padding: 5px;
     }
 
+    .diagrams_pic {
+      width: min-content;
+      height: min-content;
+      text-align: center;
+      border-color:rgb(0, 0, 0);
+      border: 1px;
+      border-style: solid;
+      margin: 5px;
+      background-color: white;
+      
+    }
+
     .prequesite {
       width: 380px;
       text-align: center;
