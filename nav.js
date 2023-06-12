@@ -146,7 +146,7 @@ let width = window.innerWidth;
 
 let address = window.location.href.split("/").pop();
 
-const knowledge = ["whatisahyrdofoil.html", "frontwingsandstabs.html", "ridingafoil.html", "foilsetup.html", "foilsetupadvanced.html", "foil_animation.html", "maneuverability.html", "drag.html", "foilshapesandsizes.html", "choosingafoil.html"];
+const knowledge = ["whatisahyrdofoil.html", "frontwingsandstabs.html", "ridingafoil.html", "foilsetup.html", "foilsetupadvanced.html", "foil_animation.html", "maneuverability.html", "drag.html", "foilshapessizes.html", "choosingafoil.html"];
 let know = new Boolean(false);
 
 const technique = ["foiling.html", "gybing.html", "tacking.html", "waveriding.html"];
